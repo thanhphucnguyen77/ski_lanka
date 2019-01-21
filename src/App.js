@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AboutUs from './containers/about-us.js';
+import { Route, Link } from 'react-router-dom';
+import HomePage from './containers/home.js';
 
 (function () {
 	'use strict';
@@ -152,14 +155,8 @@ class App extends Component {
               <button>Login</button>
             </nav>
           </header>
-
-          <div className="container">
-            <div className="homepage">
-              <h1>SKI LANKA'S FIRST</h1>
-              <h1>CRYPTOCURRENCY TRADING FLATFORM</h1>
-              <p> Learn More</p>
-            </div>
-          </div>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/about-us" component={AboutUs} />
       </div>
     );
   }
