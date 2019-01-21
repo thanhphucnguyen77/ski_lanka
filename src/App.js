@@ -4,6 +4,10 @@ import './App.css';
 import AboutUs from './containers/about-us.js';
 import { Route, Link } from 'react-router-dom';
 import HomePage from './containers/home.js';
+import ExchangeToken from './containers/exchange-token.js';
+import Affiliate from './containers/affiliate.js';
+import Market from './containers/market.js';
+import ContactUs from './containers/contact-us.js';
 
 (function () {
 	'use strict';
@@ -157,6 +161,10 @@ class App extends Component {
           </header>
           <Route path="/" exact component={HomePage} />
           <Route path="/about-us" component={AboutUs} />
+          <Route path="/exchange-token" component={ExchangeToken} />
+          <Route path="/affiliate" component={Affiliate} />
+          <Route path="/market" component={Market} />
+          <Route path="/contact-us" component={ContactUs} />
       </div>
     );
   }

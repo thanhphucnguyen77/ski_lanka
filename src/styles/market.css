@@ -1,0 +1,16 @@
+.table-market th,td {
+    border-bottom: 1px solid grey;
+    padding: 1rem;
+    border-collapse: collapse;
+}
+
+.bitcoin {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    padding: 1rem;
+}
+
+.table-market {
+    padding: 2rem 0 0 0;
+}
