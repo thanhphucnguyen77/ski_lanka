@@ -9,7 +9,7 @@ class AboutUs extends Component {
         return (
             <div>
                 {/* <p className="topbar">POkeon</p> */}
-                <div className="container-about-us">
+                <div className="container-other-page">
                     {/* <nav className="navbar">
                         <ul>
                             <li>About us</li>
@@ -19,10 +19,10 @@ class AboutUs extends Component {
                             <li>Fees</li>
                         </ul>
                     </nav> */}
-                    <Navigation />
-                    <section className="about-us-content">
-                        <div className="about-us-content-article">
-                            <h1>SKI LANKA'S FIRST<br/>
+                    <Navigation isActiveAbout={true} />
+                    <section className="page-content-about">
+                        <div className="page-content-article">
+                            {/* <h1>SKI LANKA'S FIRST<br/>
                             CRYPTOCURRENCY TRADING FLATFORM </h1>
                             <div className="divider"></div>
                                 <ul>
@@ -30,7 +30,7 @@ class AboutUs extends Component {
                                     <li>and more</li>
                                     <li>Three level-system of wallet and multi layered securitty </li>
                                     <li>Liquidity order-book allows users to freely exchange their digital assets</li>
-                                </ul>
+                                </ul> */}
                         </div>
                     </section>
                 </div>

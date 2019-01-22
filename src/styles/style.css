@@ -30,35 +30,16 @@
     line-height: 3;
 }
 
-.page-content-col1 {
-    width: 60%;
-    float: left;
-}
-
-.page-content-col2 {
-    width: 40%;
-    float: right;
-}
-
-.affiliate-table td {
-    border: 1px solid #990001; 
-    text-align: center;
-    background-color: #990001;
-
-}
-
-.affiliate-table th {
-    border: 1px solid orange;
-    text-align: center;
-    padding: 1rem;
-    background-color: orange;
-}
-
-.affiliate-table, td, th {
+.active {
+    font-size: 30px;
     color: #fff;
-    border-collapse: collapse;
+    background-color: #128732;
 }
 
-.affiliate-table {
-    margin: 0 5%;
+.page-content-exchange {
+    background-image: url('../image/Exchange.png');
+    background-size: cover;
+    max-width: 1200px;
+    color: #fff;
+    min-height: 500px;
 }

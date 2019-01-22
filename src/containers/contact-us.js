@@ -7,7 +7,7 @@ const ContactUs = (props) => {
     return (
         <div>
             <div className="container-other-page">
-                <Navigation />
+                <Navigation isActiveContact={true} />
                 <section className="page-content" >
                     <div className="page-content-article">
                         <div className="contact-us-content">

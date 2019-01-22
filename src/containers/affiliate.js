@@ -1,14 +1,15 @@
 import React from 'react'
 import Navigation from '../components/navigation.js';
 import '../styles/style.css'
+import '../styles/affiliate.css'
 
 const Affiliate = (props) => {
     return (
         <div>
             <div className="container-other-page">
-                <Navigation />
+                <Navigation isActiveAffiliate={true} />
                 <section className="page-content" >
-                    <div className="page-content-article">
+                    <div className="page-content-article-affiliate">
                         <div className="page-content-col1">
                             <h1>REWARD FOR THE REFERALS</h1>
                             <div className="divider"></div>
@@ -21,9 +22,7 @@ const Affiliate = (props) => {
                         <div className="page-content-col2">
                             <table className="affiliate-table">
                                 <tr>
-                                    <th>Reward for referals</th>
-                                    <th></th>
-                                    <th></th>
+                                    <th colSpan="3" style={{border: "1px solid ##93C37D", backgroundColor: "green"}}>Reward for referals</th>
                                 </tr>
                                 <tr>
                                     <th>Mission No.</th>

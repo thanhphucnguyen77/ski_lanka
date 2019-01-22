@@ -1,0 +1,56 @@
+.page-content-article-affiliate {
+    max-width: 100%;
+    margin: 0 auto;
+    padding:  3rem 0 3rem 1rem;
+}
+
+.page-content-article-affiliate .divider {
+    border-bottom: 2px solid #fff;
+    width: 80px;
+    margin-top: 50px;
+}
+
+.page-content-article-affiliate li {
+    line-height: 3;
+}
+
+
+.page-content-col1 {
+    width: 60%;
+    float: left;
+    padding: 0 0 0 5rem;
+}
+
+.page-content-col2 {
+    width: 40%;
+    float: right;
+}
+
+.affiliate-table td {
+    border: 1px solid #E06667; 
+    text-align: center;
+    background-color: #990001;
+
+}
+
+.affiliate-table th {
+    border: 1px solid #F5B16B;
+    text-align: center;
+    padding: 5px;
+    background-color: orange;
+}
+
+.affiliate-table, td, th {
+    color: #fff;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.affiliate-table {
+    margin: 0 auto;
+}
+
+.referrals {
+    border: 1xp solid #93C37D;
+    background-color: green;
+}

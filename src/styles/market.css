@@ -14,3 +14,15 @@
 .table-market {
     padding: 2rem 0 0 0;
 }
+
+.volumn {
+    padding: 0 1rem 0 25rem;
+}
+
+.change-up {
+    color: green;
+}
+
+.change-down {
+    color: red;
+}

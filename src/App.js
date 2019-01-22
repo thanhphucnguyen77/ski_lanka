@@ -152,7 +152,7 @@ class App extends Component {
       // </div>
       <div>
           <header>
-            <img className="logo" src={require('./image/eco-logo.jpg')} width="100" height="100" />
+            <img className="logo" src={require('./image/Logo.png')} width="100" height="100" />
 
             <nav className="authentication">
               <button>Signup</button>
