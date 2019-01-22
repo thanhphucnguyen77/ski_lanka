@@ -3,6 +3,7 @@ import Navigation from '../components/navigation.js';
 import '../styles/style.css'
 import '../styles/contactus.css'
 
+
 const ContactUs = (props) => {
     return (
         <div>
@@ -11,11 +12,12 @@ const ContactUs = (props) => {
                 <section className="page-content" >
                     <div className="page-content-article">
                         <div className="contact-us-content">
-                            <h1>Contact Us</h1>
+                            <h1 style={{color: "#fff"}}>Contact Us</h1>
                             <input type="text" placeholder="Name" width="400" height="100" /><br/>
                             <input type="text" placeholder="Email" width="400" height="100" /><br/>
                             <textarea type="text" placeholder="Questions"></textarea><br/>
                             <button className="send">Send > </button>
+                           
                         </div>
                     </div>
                 </section>

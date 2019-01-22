@@ -3,6 +3,7 @@ import React from 'react'
 import Navigation from '../components/navigation.js';
 import '../styles/style.css'
 
+
 const ExchangeToken = (props) => {
     return (
         <div>
@@ -10,6 +11,7 @@ const ExchangeToken = (props) => {
                 <Navigation isActiveExchange={true}  />
                 <section className="page-content-exchange" >
                     <div className="page-content-article">
+                    
                         {/* <h1>EXCHANGE TOKEN(SALA)</h1>
                         <div className="divider"></div>
                         <ul>

@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/navigation.css';
 import '../styles/style.css';
 
+
 const Navigation = (props) => {
     return (
         <div>
@@ -13,6 +14,7 @@ const Navigation = (props) => {
                     <li className={props.isActiveMarket ? "active" : ""}><a href="/market">Market</a></li>
                     <li className={props.isActiveContact ? "active" : ""}><a href="/contact-us">Contact Us</a></li>
                 </ul>
+                
             </nav>
         </div>
     )

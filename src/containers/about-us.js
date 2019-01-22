@@ -1,24 +1,16 @@
 import React, {Component} from 'react'
 import '../App.css'
 import '../styles/aboutus.css'
+import '../styles/style.css'
 import Navigation from '../components/navigation.js';
+
 
 
 class AboutUs extends Component {
     render() {
         return (
             <div>
-                {/* <p className="topbar">POkeon</p> */}
                 <div className="container-other-page">
-                    {/* <nav className="navbar">
-                        <ul>
-                            <li>About us</li>
-                            <li>Exchange Token (SALA)</li>
-                            <li>AFFILIATE</li>
-                            <li>Market</li>
-                            <li>Fees</li>
-                        </ul>
-                    </nav> */}
                     <Navigation isActiveAbout={true} />
                     <section className="page-content-about">
                         <div className="page-content-article">
@@ -32,6 +24,8 @@ class AboutUs extends Component {
                                     <li>Liquidity order-book allows users to freely exchange their digital assets</li>
                                 </ul> */}
                         </div>
+
+                        
                     </section>
                 </div>
             </div>

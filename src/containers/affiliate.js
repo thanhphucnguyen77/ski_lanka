@@ -11,7 +11,7 @@ const Affiliate = (props) => {
                 <section className="page-content" >
                     <div className="page-content-article-affiliate">
                         <div className="page-content-col1">
-                            <h1>REWARD FOR THE REFERALS</h1>
+                            <h1 style={{color: "#fff"}}>REWARD FOR THE REFERALS</h1>
                             <div className="divider"></div>
                             <ul >
                                 <li>Receive up to 100% commission </li>
