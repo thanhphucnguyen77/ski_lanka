@@ -14,6 +14,7 @@
     max-width: 1200px;
     color: #fff;
     min-height: 500px;
+    margin-top: -15px;
 }
 
 .page-content-article {
@@ -38,23 +39,90 @@
     background-color: #128732;
 }
 
-.page-content-exchange {
-    background-image: url('../image/Exchange.png');
-    background-size: cover;
-    max-width: 1200px;
-    color: #fff;
-    min-height: 500px;
-}
+
 
 .ant-tabs-bar {
     border: none;
 }
 
 .ant-tabs-ink-bar {
-    background-color: #128732;
+    background-color: black;
 }
 
 .ant-tabs-nav .ant-tabs-tab {
-    background-color: #128732;
+    background-color: black;
     margin: 0 !important;
+    padding: 10px 4rem;
+
+}
+
+/* About us slide */
+
+.page-content-about {
+   
+    max-width: 1200px;
+    color: #fff;
+    min-height: 500px;
+    margin-top: -15px;
+
+
+}
+
+/* Exchange token page */
+
+.page-content-exchange {
+    background-image: url('../image/slide3.jpg');
+    background-size: cover;
+    max-width: 1200px;
+    color: #fff;
+    min-height: 500px;
+    margin-top: -15px;
+}
+
+/* Affiliate page */
+
+.page-content-article-affiliate {
+   
+    max-width: 100%;
+    margin: 0 auto;
+    /* padding:  3rem 0 3rem 1rem; */
+}
+
+.page-content-article-affiliate .divider {
+    border-bottom: 2px solid #fff;
+    width: 80px;
+    margin-top: 50px;
+}
+
+.page-content-article-affiliate li {
+    line-height: 3;
+}
+
+
+.page-content-col1 {
+    background-image: url("../image/slide4.jpg");
+    background-size: cover;
+    width: 60%;
+    float: left;
+    padding: 5rem 2rem;
+    height: 500px;
+}
+
+.page-content-col2 {
+    background-image: url("../image/slide4.jpg");
+    background-size: cover;
+    width: 40%;
+    float: right;
+    height: 500px;
+}
+
+/* Contact us */
+
+.page-content-contact {
+    background-image: url('../image/slide6.jpg');
+    background-size: cover;
+    max-width: 1200px;
+    color: #fff;
+    min-height: 500px;
+    margin-top: -15px;
 }
