@@ -2,25 +2,74 @@ import React from 'react';
 import '../styles/style.css'
 
 import { Tabs } from 'antd';
+import $ from "jquery";
+import SplitText from 'react-pose-text';
+
 
 const TabPane = Tabs.TabPane;
 
 function callback(key) {
   console.log(key);
 }
+  
+const charPoses = {
+    exit: { opacity: 0, y: 20 },
+    enter: {
+      opacity: 1,
+      y: 0,
+      delay: ({ charIndex }) => charIndex * 30
+    }
+  };
 
 
-const HomePage = (props) => {
+
+
+class HomePage extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            isVisibleTitle: true,
+            isVisibleMenu: false
+        }
+    }
+
+    displayMenu = () => {
+        setTimeout(() => {
+            this.setState({
+                isVisibleTitle: false,
+                isVisibleMenu: true
+            })
+        }, 2000)
+    }
+
+    componentDidMount() {
+        this.displayMenu();
+    }
+
+    render() {
     return (
         <div>
-            <div className="container">
-                <div className="homepage">
-                <h1>SKI LANKA'S FIRST</h1>
-                <h1>CRYPTOCURRENCY TRADING FLATFORM</h1>
-                <p> Learn More</p>
+            {
+                this.state.isVisibleTitle ? 
+                <div className="container">
+                    <div className="homepage">
+                        <h1>
+                            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+                                SKI LANKA'S FIRST
+                            </SplitText><br/>
+                            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+                                CRYPTOCURRENCY TRADING FLATFORM
+                            </SplitText>
+                        </h1>
+                    </div>
                 </div>
-            </div>
+                : ""
+            }
 
+            {this.displayMenu}
+
+            { this.state.isVisibleMenu ? 
+        
             <div className="container-other-page">
                 <div style={{width: "100%", height: "50px", backgroundColor: "black", position: "absolute", top: "500px"}}>
                 <Tabs defaultActiveKey="1" onChange={callback}>
@@ -71,71 +120,7 @@ const HomePage = (props) => {
                         </div>
                         <div className="page-content-col2">
                             <img src={require('../image/mission_slide4.png')} width="300" height="400" style={{display: "block", margin: "3rem auto"}} />
-                            {/* <table className="affiliate-table">
-                                <tr>
-                                    <th colSpan="3" style={{border: "1px solid ##93C37D", backgroundColor: "green"}}>Reward for referals</th>
-                                </tr>
-                                <tr>
-                                    <th>Mission No.</th>
-                                    <th>Team Size</th>
-                                    <th>Reward</th>
-                                </tr>
-
-                                <tr>
-                                    <td>Mission 1</td>
-                                    <td>5</td>
-                                    <td>5%</td>
-                                </tr>
-                                <tr>
-                                    <td>Mission 2</td>
-                                    <td>10</td>
-                                    <td>10%</td>
-                                </tr>
-                                <tr>
-                                    <td>Mission 3</td>
-                                    <td>15</td>
-                                    <td>15%</td>
-                                </tr>
-                                <tr>
-                                    <td>Mission 4</td>
-                                    <td>20</td>
-                                    <td>20%</td>
-                                </tr>
-                                <tr>
-                                    <td>Mission 5</td>
-                                    <td>25</td>
-                                    <td>25%</td>
-                                </tr>
-                                <tr>
-                                    <td>Mission 6</td>
-                                    <td>30</td>
-                                    <td>30</td>
-                                </tr>
-                                <tr>
-                                    <td>Mission 7</td>
-                                    <td>35</td>
-                                    <td>35%</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Mission 8</td>
-                                    <td>50</td>
-                                    <td>50%</td>
-                                </tr>
-                                <tr>
-                                    <td>Mission 9</td>
-                                    <td>80</td>
-                                    <td>80%</td>
-                                </tr>
-
-                                 <tr>
-                                    <td>Final mission</td>
-                                    <td>100</td>
-                                    <td>100%</td>
-                                </tr>
-
-
-                            </table> */}
+                            
                         </div>
                     </div>
                 </section>
@@ -248,11 +233,12 @@ const HomePage = (props) => {
                 </Tabs>
                 </div>
              </div>
-
-           
+            : ""
+            }
 
         </div>
     )
+    }
 }
 
 export default HomePage

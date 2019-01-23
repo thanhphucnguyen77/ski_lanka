@@ -150,7 +150,7 @@ class App extends Component {
       //   </header>
       //   <p style={{zIndex: "1000000000", color: "#fff"}}>Hello world</p>
       // </div>
-      <div style={{overflow: "auto"}}>
+      <div>
           <header>
             <img className="logo" src={require('./image/Logo.png')} width="100" height="100" />
 
