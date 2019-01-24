@@ -2,18 +2,18 @@
 
 .container-other-page {
     max-width: 1200px;
-    height: 500px;
+    height: 450px;
     margin: 0 auto;
     position: relative;
     z-index: 10;
-    top: -300px;
+    top: -320px;
 }
 
 .page-content {
     background-color: black;
     max-width: 1200px;
     color: #fff;
-    min-height: 500px;
+    min-height: 450px;
     margin-top: -15px;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .active {
-    font-size: 30px;
+    font-size: 35px !important;
     color: #fff;
     background-color: #128732;
 }
@@ -46,14 +46,23 @@
 }
 
 .ant-tabs-ink-bar {
+    bottom: 0px !important;
     background-color: black;
 }
 
 .ant-tabs-nav .ant-tabs-tab {
     background-color: black;
     margin: 0 !important;
-    padding: 10px 4rem;
+    padding: 10px 4.52rem;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
 
+}
+
+.ant-tabs-tab-active {
+    background-color: #128732 !important;
+    color: #fff;
 }
 
 /* About us slide */
@@ -62,7 +71,7 @@
    
     max-width: 1200px;
     color: #fff;
-    min-height: 500px;
+    min-height: 450px;
     margin-top: -15px;
 
 
@@ -75,7 +84,7 @@
     background-size: cover;
     max-width: 1200px;
     color: #fff;
-    min-height: 500px;
+    min-height: 450px;
     margin-top: -15px;
 }
 
@@ -105,7 +114,7 @@
     width: 60%;
     float: left;
     padding: 5rem 2rem;
-    height: 500px;
+    height: 450px;
 }
 
 .page-content-col2 {
@@ -113,7 +122,7 @@
     background-size: cover;
     width: 40%;
     float: right;
-    height: 500px;
+    height: 450px;
 }
 
 /* Contact us */
@@ -123,9 +132,35 @@
     background-size: cover;
     max-width: 1200px;
     color: #fff;
-    min-height: 500px;
+    min-height: 450px;
     margin-top: -15px;
+    box-sizing: border-box;
 }
+
+.contact-us-content {
+    text-align: center;
+}
+
+.contact-us-content input {
+    margin: 1rem 0;
+    width: 200px;
+    height: 50px;
+}
+
+.contact-us-content textarea {
+    width: 200px;
+    height: 100px;
+}
+
+.send {
+    padding: 1rem;
+    background-color: black;
+    color: #fff;
+    border: 2px solid #fff;
+    margin: 1rem 0;
+}
+
+
 
 /* Effect */
 

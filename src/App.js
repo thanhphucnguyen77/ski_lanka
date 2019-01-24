@@ -17,7 +17,7 @@ import ContactUs from './containers/contact-us.js';
       mousePos,
       points = [],
       maxDist = 200,
-      colour = "255,30,70";
+      colour = "10,255,10";
 
 	function init () {
 		//Add on load scripts
@@ -152,7 +152,7 @@ class App extends Component {
       // </div>
       <div>
           <header>
-            <img className="logo" src={require('./image/Logo.png')} width="100" height="100" />
+            <img className="logo" src={require('./image/ECO_LOGO.png')} width="50" height="50" />
 
             <nav className="authentication">
               <button>Signup</button>
