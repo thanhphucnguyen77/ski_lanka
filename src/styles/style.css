@@ -1,7 +1,7 @@
 @import '~antd/dist/antd.css';
 
 .container-other-page {
-    max-width: 1200px;
+    max-width: 1000px;
     height: 450px;
     margin: 0 auto;
     position: relative;
@@ -10,17 +10,23 @@
 }
 
 .page-content {
-    background-color: black;
-    max-width: 1200px;
+    /* background-color: black; */
+    max-width: 1000px;
     color: #fff;
     min-height: 450px;
     margin-top: -15px;
+
 }
 
 .page-content-article {
-    max-width: 800px;
-    margin: 0 auto;
-    padding:  5rem 0 3rem 0;
+    max-width: 1000px;
+    z-index: 1000;
+    opacity: 1;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 4rem 0 0 7rem;
 }
 
 .page-content-article .divider {
@@ -57,7 +63,7 @@
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    width: 240px;
+    width: 200px;
     box-sizing: border-box;
     text-align: center;
     height: auto;
@@ -70,7 +76,7 @@
     font-size: 16px !important;
     font-weight: bold;
     /* padding: 5px 3.7rem !important; */
-    width: 240px;
+    width: 200px;
     box-sizing: border-box;
     text-align: center;
     height: auto !important;
@@ -80,7 +86,7 @@
 
 .page-content-about {
    
-    max-width: 1200px;
+    max-width: 1000px;
     color: #fff;
     min-height: 450px;
     margin-top: -15px;
@@ -93,13 +99,40 @@
 .page-content-exchange {
     background-image: url('../image/slide3.jpg');
     background-size: cover;
-    max-width: 1200px;
+    max-width: 1000px;
     color: #fff;
     min-height: 450px;
     margin-top: -15px;
+    filter: brightness(0.4);
+    -webkit-filter: brightness(0.4);
+    -moz-filter: brightness(0.4);
+    -o-filter: brightness(0.4);
+    -ms-filter: brightness(0.4);
+    position: relative;
+
 }
 
 /* Affiliate page */
+
+.page-content-affiliate {
+    background-image: url('../image/slide4.jpg');
+    background-size: cover;
+    max-width: 1000px;
+    color: #fff;
+    min-height: 450px;
+    margin-top: -15px;
+    filter: brightness(0.4);
+    -webkit-filter: brightness(0.4);
+    -moz-filter: brightness(0.4);
+    -o-filter: brightness(0.4);
+    -ms-filter: brightness(0.4);
+    position: relative;
+
+}
+
+
+
+
 
 .page-content-article-affiliate {
    
@@ -108,29 +141,29 @@
     /* padding:  3rem 0 3rem 1rem; */
 }
 
-.page-content-article-affiliate .divider {
+.page-content-affiliate .divider {
     border-bottom: 2px solid #fff;
     width: 80px;
     margin-top: 50px;
 }
 
-.page-content-article-affiliate li {
+.page-content-affiliate li {
     line-height: 3;
 }
 
 
 .page-content-col1 {
-    background-image: url("../image/slide4.jpg");
-    background-size: cover;
+    /* background-image: url("../image/slide4.jpg");
+    background-size: cover; */
     width: 60%;
     float: left;
-    padding: 5rem 2rem;
+    /* padding: 5rem 2rem; */
     height: 450px;
 }
 
 .page-content-col2 {
-    background-image: url("../image/slide4.jpg");
-    background-size: cover;
+    /* background-image: url("../image/slide4.jpg");
+    background-size: cover; */
     width: 40%;
     float: right;
     height: 450px;
@@ -141,11 +174,19 @@
 .page-content-contact {
     background-image: url('../image/slide6.jpg');
     background-size: cover;
-    max-width: 1200px;
+    max-width: 1000px;
     color: #fff;
     min-height: 450px;
     margin-top: -15px;
     box-sizing: border-box;
+    filter: brightness(0.4);
+    -webkit-filter: brightness(0.4);
+    -moz-filter: brightness(0.4);
+    -o-filter: brightness(0.4);
+    -ms-filter: brightness(0.4);
+    position: relative;
+
+
 }
 
 .contact-us-content {
