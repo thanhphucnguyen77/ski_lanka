@@ -17,7 +17,7 @@ import ContactUs from './containers/contact-us.js';
       mousePos,
       points = [],
       maxDist = 200,
-      colour = "10,255,10";
+      colour = "0,153,77";
 
 	function init () {
 		//Add on load scripts

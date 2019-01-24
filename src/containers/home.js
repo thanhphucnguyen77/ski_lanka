@@ -71,9 +71,9 @@ class HomePage extends React.Component {
             { this.state.isVisibleMenu ? 
         
             <div className="container-other-page">
-                <div style={{width: "100%", height: "50px", backgroundColor: "black", position: "absolute", top: "500px"}}>
+                <div style={{width: "100%", height: "35px", position: "absolute", top: "500px", boxSizing: "border-box"}}>
                 <Tabs defaultActiveKey="1" onChange={callback}>
-                    <TabPane tab={<span style={{color: "#fff", fontSize: "20px", fontWeight: "bold"}}>About us</span>} key="1">
+                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>About us</span>} key="1">
                         <section className="page-content-about">
                             <div className="page-content-article">
                                 <h1 style={{color: "#fff"}}>SKI LANKA'S FIRST<br/>
@@ -90,7 +90,7 @@ class HomePage extends React.Component {
                         </section>
                     
                     </TabPane>
-                    <TabPane tab={<span style={{color: "#fff", fontSize: "20px", fontWeight: "bold"}}>Exchange Token</span>} key="2">
+                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Exchange Token</span>} key="2">
                         <section className="page-content-exchange" >
                             <div className="page-content-article">
                             
@@ -106,7 +106,7 @@ class HomePage extends React.Component {
                         </section>
                     
                     </TabPane>
-                    <TabPane tab={<span style={{color: "#fff", fontSize: "20px", fontWeight: "bold"}}>Affiliate</span>} key="3">
+                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Affiliate</span>} key="3">
                     <section className="page-content" >
                     <div className="page-content-article-affiliate">
                         <div className="page-content-col1">
@@ -126,13 +126,14 @@ class HomePage extends React.Component {
                 </section>
                     
                     </TabPane>
-                    <TabPane tab={<span style={{color: "#fff", fontSize: "20px", fontWeight: "bold"}}>Market</span>} key="4">
+                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Market</span>} key="4">
                         <section className="page-content" style={{backgroundColor: "#2A3341"}} >
                     
                             <span className="bitcoin">BITCOIN MARKETS</span>
                             <span style={{padding: "1rem"}}>Total Volumn = 423,56777</span>
                             <span style={{padding: "1rem"}}>1BTC = $3.123344555</span>
                             <table className="table-market">
+                                <tbody>
                                 <tr>
                                     <th>Market</th>
                                     <th>Current</th>
@@ -210,13 +211,14 @@ class HomePage extends React.Component {
                                     <td>0.233445556</td>
                                     <td>0.233445556</td>
                                 </tr>
+                                </tbody>
                             </table>
                    
                         </section>
                     
                     
                     </TabPane>
-                    <TabPane tab={<span style={{color: "#fff", fontSize: "20px", fontWeight: "bold"}}>Contact Us</span>} key="5">
+                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Contact Us</span>} key="5">
                         <section className="page-content-contact" >
                             <div className="page-content-article">
                                 <div className="contact-us-content">
