@@ -44,6 +44,11 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .topbar {
@@ -80,27 +85,38 @@ a:hover {
   height: 200px;
   position: absolute;
   z-index: 10;
-}
-
-.authentication {
-  position: absolute;
-  top: 0;
-  right: 0;
   
 }
 
-.authentication button {
+.authentication {
+  width: 250px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+  
+  
+  
+}
+
+.authentication a {
   color: #fff;
-  background-color: #128732;
+  /* background-color: #128732; */
   font-size: 15px;
   font-weight: bold;
   border: none;
-  padding: 5px 20px;
-  margin: 4rem 10px;
+  padding: 5px 10px;
+  float: right;
+  margin-top: 4rem;
 }
 
-.authentication button:last-child {
-  margin-right: 50px;
+.authentication a:hover {
+  border-bottom: 3px solid #128732;
+  color: #fff;
+}
+
+.authentication a:last-child {
+  margin-right: 5px;
 } 
 
 .container {

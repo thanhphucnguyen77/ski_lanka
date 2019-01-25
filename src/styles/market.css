@@ -1,4 +1,4 @@
-.table-market th,td {
+/* .table-market th,td {
     border-bottom: 1px solid grey;
     padding: 1rem;
     border-collapse: collapse;
@@ -16,7 +16,7 @@
 }
 
 .volumn {
-    padding: 0 1rem 0 25rem;
+    padding: 0 1rem 0 10rem;
 }
 
 .change-up {
@@ -25,4 +25,4 @@
 
 .change-down {
     color: red;
-}
+} */

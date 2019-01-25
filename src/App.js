@@ -151,12 +151,12 @@ class App extends Component {
       //   <p style={{zIndex: "1000000000", color: "#fff"}}>Hello world</p>
       // </div>
       <div>
-          <header>
+          <header style={{maxWidth: "1000px", margin: "0 auto", position: "relative"}}>
             <img className="logo" src={require('./image/ECO_LOGO.png')} width="50" height="50" />
 
             <nav className="authentication">
-              <button>Signup</button>
-              <button>Login</button>
+              <a href="#">Login</a>
+              <a href="#">Sign up</a>
             </nav>
           </header>
           <Route path="/" exact component={HomePage} />

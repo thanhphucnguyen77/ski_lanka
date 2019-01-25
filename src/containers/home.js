@@ -4,6 +4,7 @@ import '../styles/style.css'
 import { Tabs } from 'antd';
 import $ from "jquery";
 import SplitText from 'react-pose-text';
+import jQuery from 'jquery';
 
 
 const TabPane = Tabs.TabPane;
@@ -23,7 +24,7 @@ const charPoses = {
 
   $(document).ready(function(){
     var theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
-    var ctnt = "SKI LANKA'S FIRST<br/>CRYPTOCURRENCY TRADING FLATFROM"; // Your text goes here
+    var ctnt = "SKI LANKA'S FIRST<br/>CRYPTOCURRENCY TRADING FLATFORM"; // Your text goes here
     var speed = 50; // ms per frame
     var increment = 8; // frames per step. Must be >2
     
@@ -64,6 +65,15 @@ const charPoses = {
     });
 
 
+/* Effect for about us */
+
+
+
+
+
+
+
+
 
 
 
@@ -85,9 +95,9 @@ class HomePage extends React.Component {
         }, 2000)
     }
 
-    // componentDidMount() {
-    //     this.displayMenu();
-    // }
+    componentDidMount() {
+        this.displayMenu();
+    }
 
     render() {
     return (
@@ -110,7 +120,7 @@ class HomePage extends React.Component {
                 : ""
             }
 
-            {this.displayMenu}
+            {/* {this.displayMenu} */}
 
             { this.state.isVisibleMenu ? 
         
@@ -120,7 +130,7 @@ class HomePage extends React.Component {
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>About us</span>} key="1">
                         <section className="page-content-about">
                             <div className="page-content-article">
-                                <h1 style={{color: "#fff"}}>SKI LANKA'S FIRST<br/>
+                                {/* <h1 style={{color: "#fff"}}>SKI LANKA'S FIRST<br/>
                                 CRYPTOCURRENCY TRADING FLATFORM </h1>
                                 <div className="divider"></div>
                                 <ul>
@@ -128,7 +138,31 @@ class HomePage extends React.Component {
                                     <li>and more</li>
                                     <li>Three level-system of wallet and multi layered securitty </li>
                                     <li>Liquidity order-book allows users to freely exchange their digital assets</li>
-                                </ul>
+                                </ul> */}
+                                <div className="text-container">
+                                    <span>O</span><span>u</span><span>r</span>
+                                    
+                                    <span>w</span><span>o</span><span>r</span><span>d</span><span>s</span>
+
+                                    <span>h</span><span>a</span><span>v</span><span>e</span>
+                                    
+                                    <span>w</span><span>i</span><span>n</span><span>g</span><span>s</span><span>,</span>
+                                    <br/>
+                                    <span>b</span><span>u</span><span>t</span>
+                                    
+                                    <span>f</span><span>l</span><span>y</span>
+                                    
+                                    <span>n</span><span>o</span><span>t</span>
+                                    
+                                    <span>w</span><span>h</span><span>e</span><span>r</span><span>e</span>
+                                    
+                                    <span>w</span><span>e</span>
+                                    
+                                    <span>w</span><span>o</span><span>u</span><span>l</span><span>d</span><span>.</span>
+                                </div>  
+                            
+                                
+
                             </div>
                             
                         </section>
@@ -142,9 +176,9 @@ class HomePage extends React.Component {
                                 <div className="divider"></div>
                                 <ul style={{color: "#fff"}}>
                                     <li>Will launch SALA in form of trading mining</li>
-                                    <li>Our aim is to create an useful exchange token both in-outside of the exchange</li>
-                                    <li>Put one more about token</li>
-                                    <li>SALA Whitepaper</li>
+                                    <li>Our mission is to establish an useful exchange token both in-outside of the exchange</li>
+                                    <li>Get discounts on various fees </li>
+                                    <li>More information will be announced shortly, for more details, please check our WhitePaper</li>
                                 </ul>
                             </div>
                         </section>
@@ -155,18 +189,18 @@ class HomePage extends React.Component {
                         {/* <section className="page-content-affiliate"></section> */}
                         <div className="page-content-article">
                             <div className="page-content-col1">
-                                <h1 style={{color: "#fff"}}>REWARD FOR THE REFERALS</h1>
+                                <h1 style={{color: "#fff"}}>Reward for Referrals</h1>
                                 <div className="divider"></div>
                                 <ul style={{color: "#fff"}} >
                                     <li>Receive up to 100% commission </li>
-                                    <li>Commission rate depends on your team size (the number of people linked to referals) Very Simple</li>
-                                    <li>You will receive some commission as low as just having on team member</li>
+                                    <li>Commission rate will depend on your team size. (Team size = Number of users linked to your referral)</li>
+                                    <li>Our model will let you receive reward as low as inviting one friend</li>
                                 </ul>
                             </div>
-                            <div className="page-content-col2">
+                            {/* <div className="page-content-col2">
                                 <img src={require('../image/mission_slide4.png')} width="300" height="350" style={{display: "block"}} />
                                 
-                            </div>
+                            </div> */}
                         </div>
                     </section>
                 
@@ -183,7 +217,7 @@ class HomePage extends React.Component {
                                 <tr>
                                     <th>Market</th>
                                     <th>Current</th>
-                                    <th style={{padding: "0 1rem 0 25rem"}}>Volumn</th>
+                                    <th style={{padding: "0 1rem 0 8rem"}}>Volumn</th>
                                     <th >Change</th>
                                     <th>Last Price</th>
                                     <th>24HR HIGH</th>
@@ -193,66 +227,66 @@ class HomePage extends React.Component {
                                 <tr>
                                     <td>BTC-ETH</td>
                                     <td>Ethereum</td>
-                                    <td className="volumn">5.12%</td>
+                                    <td className="volumn">512.19</td>
                                     <td className="change-down">-3.4</td>
+                                    <td>0.03317924</td>
+                                    <td>0.233445556</td>
+                                    <td>0.233445556</td>
+                                </tr>
+
+                                <tr>
+                                    <td>BTC-TRX</td>
+                                    <td>TRON</td>
+                                    <td className="volumn">331.35</td>
+                                    <td className="change-up">12.4</td>
                                     <td>0.123234544</td>
                                     <td>0.233445556</td>
                                     <td>0.233445556</td>
                                 </tr>
 
                                 <tr>
-                                    <td>BTC-ETH</td>
-                                    <td>Ethereum</td>
-                                    <td className="volumn">5.12%</td>
-                                    <td className="change-up">-3.4</td>
+                                    <td>BTC-ADA</td>
+                                    <td >Cardano</td>
+                                    <td className="volumn">323.18</td>
+                                    <td className="change-down">-3.1</td>
                                     <td>0.123234544</td>
                                     <td>0.233445556</td>
                                     <td>0.233445556</td>
                                 </tr>
 
                                 <tr>
-                                    <td>BTC-ETH</td>
-                                    <td >Ethereum</td>
-                                    <td className="volumn">5.12%</td>
-                                    <td className="change-down">-3.4</td>
+                                    <td>BTC-WAVES</td>
+                                    <td>Waves</td>
+                                    <td className="volumn">259.58</td>
+                                    <td className="change-up">9.1</td>
                                     <td>0.123234544</td>
                                     <td>0.233445556</td>
                                     <td>0.233445556</td>
                                 </tr>
 
                                 <tr>
-                                    <td>BTC-ETH</td>
-                                    <td>Ethereum</td>
-                                    <td className="volumn">5.12%</td>
-                                    <td className="change-up">-3.4</td>
-                                    <td>0.123234544</td>
-                                    <td>0.233445556</td>
-                                    <td>0.233445556</td>
-                                </tr>
-
-                                <tr>
-                                    <td>BTC-ETH</td>
-                                    <td>Ethereum</td>
-                                    <td className="volumn">5.12%</td>
-                                    <td className="change-down">-3.4</td>
+                                    <td>BTC-BCH</td>
+                                    <td>Bitcoin Cash(ABC)</td>
+                                    <td className="volumn">257.27</td>
+                                    <td className="change-down">-3.5</td>
                                     <td>0.123234544</td>
                                     <td>0.233445556</td>
                                     <td>0.233445556</td>
                                 </tr>
                                 <tr>
-                                    <td>BTC-ETH</td>
-                                    <td>Ethereum</td>
-                                    <td className="volumn">5.12%</td>
-                                    <td className="change-down">-3.4</td>
+                                    <td>BTC-XRP</td>
+                                    <td>XRP</td>
+                                    <td className="volumn">174.80</td>
+                                    <td className="change-down">-0.3</td>
                                     <td>0.123234544</td>
                                     <td>0.233445556</td>
                                     <td>0.233445556</td>
                                 </tr> 
                                 <tr>
-                                    <td>BTC-ETH</td>
-                                    <td>Ethereum</td>
-                                    <td className="volumn">5.12%</td>
-                                    <td className="change-down">-3.4</td>
+                                    <td>BTC-XLM</td>
+                                    <td>Lumen</td>
+                                    <td className="volumn">107.56</td>
+                                    <td className="change-down">-2.6</td>
                                     <td>0.123234544</td>
                                     <td>0.233445556</td>
                                     <td>0.233445556</td>
@@ -265,8 +299,8 @@ class HomePage extends React.Component {
                     
                     </TabPane>
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Contact Us</span>} key="5">
-                        <section className="page-content" ></section>
-                            <div className="page-content-article">
+                        <section className="page-content" >
+                            <div className="page-content-article-contact">
                                 <div className="contact-us-content">
                                     <h1 style={{color: "#fff", opacity: "1 !important"}}>Contact Us</h1>
                                     <input type="text" placeholder="Name" width="400" height="100" /><br/>
@@ -276,7 +310,7 @@ class HomePage extends React.Component {
                                 
                                 </div>
                             </div>
-            
+                        </section>
                     </TabPane>
                 </Tabs>
                 </div>
