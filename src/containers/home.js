@@ -5,6 +5,7 @@ import { Tabs } from 'antd';
 import $ from "jquery";
 import SplitText from 'react-pose-text';
 import jQuery from 'jquery';
+import '../scss/home.scss';
 
 
 const TabPane = Tabs.TabPane;
@@ -23,7 +24,8 @@ const charPoses = {
   };
 
   $(document).ready(function(){
-    var theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
+    //var theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
+    var theLetters = "abcdefg&^+=-";
     var ctnt = "SKI LANKA'S FIRST<br/>CRYPTOCURRENCY TRADING FLATFORM"; // Your text goes here
     var speed = 50; // ms per frame
     var increment = 8; // frames per step. Must be >2
@@ -92,7 +94,7 @@ class HomePage extends React.Component {
                 isVisibleTitle: false,
                 isVisibleMenu: true
             })
-        }, 2000)
+        }, 25000)
     }
 
     componentDidMount() {
@@ -130,16 +132,54 @@ class HomePage extends React.Component {
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>About us</span>} key="1">
                         <section className="page-content-about">
                             <div className="page-content-article">
-                                {/* <h1 style={{color: "#fff"}}>SKI LANKA'S FIRST<br/>
-                                CRYPTOCURRENCY TRADING FLATFORM </h1>
-                                <div className="divider"></div>
-                                <ul>
-                                    <li>Spot trading flatform for major digital assets including</li>
-                                    <li>and more</li>
-                                    <li>Three level-system of wallet and multi layered securitty </li>
-                                    <li>Liquidity order-book allows users to freely exchange their digital assets</li>
-                                </ul> */}
-                                <div className="text-container">
+                                <div className="page-content-text">
+                                    <h1 className="about-us-title" style={{color: "#fff"}}>
+                                        <span>S</span><span>K</span><span>I</span>&nbsp;
+                                        <span>L</span><span>A</span><span>N</span><span>K</span><span>A</span><span>'S</span>&nbsp;
+                                        <span>F</span><span>I</span><span>R</span><span>S</span><span>T</span><br/>
+                                        <span>C</span><span>R</span><span>Y</span><span>P</span><span>C</span><span>U</span><span>R</span> <span>R</span><span>R</span><span>E</span><span>N</span><span>C</span><span>Y</span>&nbsp;
+                                        <span>T</span><span>R</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>&nbsp;
+                                        <span>F</span><span>L</span><span>A</span><span>T</span><span>F</span><span>O</span><span>R</span><span>M</span>
+                                    </h1>
+                                    <div className="divider"></div>
+                                    <ul>
+                                        {/* <li>Spot trading flatform for major digital assets including</li> */}
+                                        <li className="line1"> 
+                                            <span>S</span><span>p</span><span>o</span><span>t</span>&nbsp;
+                                            <span>t</span><span>r</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp;
+                                            <span>f</span><span>l</span><span>a</span><span>t</span><span>f</span><span>o</span><span>r</span><span>m</span>&nbsp;
+                                            <span>f</span><span>o</span><span>r</span>&nbsp; 
+                                            <span>m</span><span>a</span><span>j</span><span>o</span><span>r</span>&nbsp;
+                                            <span>d</span><span>i</span><span>g</span><span>i</span><span>t</span><span>a</span><span>l</span> &nbsp;
+                                            <span>a</span><span>s</span><span>s</span><span>e</span><span>t</span><span>s</span>&nbsp;
+                                            <span>i</span><span>c</span><span>l</span><span>u</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp;
+                                        </li>
+                                        {/* <li>and more</li> */}
+                                        {/* <li>Three level-system of wallet and multi layered securitty </li> */}
+                                        <li className="line2">
+                                            <span>T</span><span>h</span><span>r</span><span>e</span><span>e</span>&nbsp;
+                                            <span>l</span><span>e</span><span>v</span><span>e</span><span>l</span><span>-</span><span>s</span><span>y</span><span>s</span><span>t</span><span>e</span><span>m</span>&nbsp;
+                                            <span>o</span><span>f</span>&nbsp;
+                                            <span>w</span><span>a</span><span>l</span><span>l</span><span>e</span><span>t</span>&nbsp;
+                                            <span>a</span><span>d</span>&nbsp;
+                                            <span>m</span><span>u</span><span>l</span><span>t</span><span>i</span>&nbsp;
+                                            <span>l</span><span>a</span><span>y</span><span>e</span><span>r</span><span>e</span><span>d</span>&nbsp;
+                                            <span>s</span><span>e</span><span>c</span><span>u</span><span>r</span><span>i</span><span>t</span><span>y</span>&nbsp;
+                                        </li>
+                                        {/* <li>Liquidity order-book allows users to freely exchange their digital assets</li> */}
+                                        <li className="line3">
+                                            <span>L</span><span>i</span><span>q</span><span>u</span><span>i</span><span>d</span><span>i</span><span>t</span><span>y</span>&nbsp;
+                                            <span>o</span><span>r</span><span>d</span><span>e</span><span>r</span><span>s</span><span>b</span><span>o</span><span>o</span><span>k</span>&nbsp;
+                                            <span>a</span><span>l</span><span>l</span><span>o</span><span>w</span><span>s</span>&nbsp;
+                                            <span>u</span><span>s</span><span>e</span><span>r</span><span>s</span>&nbsp;
+                                            <span>t</span><span>o</span>&nbsp;
+                                            <span>f</span><span>r</span><span>e</span><span>e</span><span>l</span><span>y</span>&nbsp;
+                                            <span>e</span><span>x</span><span>c</span><span>h</span><span>a</span><span>n</span><span>g</span><span>e</span>&nbsp;
+                                            <span>t</span><span>h</span><span>e</span><span>i</span><span>r</span>&nbsp;
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/* <div className="text-container">
                                     <span>O</span><span>u</span><span>r</span>
                                     
                                     <span>w</span><span>o</span><span>r</span><span>d</span><span>s</span>
@@ -159,7 +199,7 @@ class HomePage extends React.Component {
                                     <span>w</span><span>e</span>
                                     
                                     <span>w</span><span>o</span><span>u</span><span>l</span><span>d</span><span>.</span>
-                                </div>  
+                                </div>   */}
                             
                                 
 

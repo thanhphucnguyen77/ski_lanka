@@ -1,0 +1,116 @@
+/* moving letter  */
+
+div.text-container {
+    span {
+        display: inline-block;
+        opacity: 0;
+        margin: 0;
+    }
+
+    @for $i from 1 through 41{
+        span:nth-child(#{$i}){
+          animation: flyin#{$i} 4s 1 forwards; 
+        }
+        @keyframes flyin#{$i}{
+          0%{
+            transform: translate(random(700) - 350 + px, random(700) - 350 + px); 
+          }
+          25%{
+           opacity: .1; 
+          }
+          100%{
+            transform: translate(0,0);
+            opacity: 1; 
+          }
+        }
+      }
+}
+
+div.page-content-text {
+    span {
+        display: inline-block;
+        opacity: 0;
+        margin: 0;
+    }
+    .about-us-title {
+        @for $i from 1 through 44{
+            span:nth-child(#{$i}){
+            animation: flyin#{$i} 4s 1 forwards; 
+            }
+            @keyframes flyin#{$i}{
+            0%{
+                transform: translate(random(700) - 350 + px, random(700) - 350 + px); 
+            }
+            25%{
+            opacity: .1; 
+            }
+            100%{
+                transform: translate(0,0);
+                opacity: 1; 
+            }
+            }
+        }
+    }
+    ul {
+        .line1 {
+            @for $i from 1 through 50{
+                span:nth-child(#{$i}){
+                  animation: flyin#{$i} 4s 1 forwards; 
+                }
+                @keyframes flyin#{$i}{
+                  0%{
+                    transform: translate(random(700) - 350 + px, random(700) - 350 + px); 
+                  }
+                  25%{
+                   opacity: .1; 
+                  }
+                  100%{
+                    transform: translate(0,0);
+                    opacity: 1; 
+                  }
+                }
+              }
+        }
+
+        .line2 {
+            @for $i from 1 through 50{
+                span:nth-child(#{$i}){
+                  animation: flyin#{$i} 4s 1 forwards; 
+                }
+                @keyframes flyin#{$i}{
+                  0%{
+                    transform: translate(random(700) - 350 + px, random(700) - 350 + px); 
+                  }
+                  25%{
+                   opacity: .1; 
+                  }
+                  100%{
+                    transform: translate(0,0);
+                    opacity: 1; 
+                  }
+                }
+              }
+        }
+
+        .line3 {
+            @for $i from 1 through 65{
+                span:nth-child(#{$i}){
+                  animation: flyin#{$i} 4s 1 forwards; 
+                }
+                @keyframes flyin#{$i}{
+                  0%{
+                    transform: translate(random(700) - 350 + px, random(700) - 350 + px); 
+                  }
+                  25%{
+                   opacity: .1; 
+                  }
+                  100%{
+                    transform: translate(0,0);
+                    opacity: 1; 
+                  }
+                }
+              }
+        }
+    }
+
+}
