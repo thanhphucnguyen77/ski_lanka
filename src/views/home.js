@@ -70,15 +70,6 @@ const charPoses = {
 /* Effect for about us */
 
 
-
-
-
-
-
-
-
-
-
 class HomePage extends React.Component {
     constructor(props) {
         super(props)
@@ -179,30 +170,7 @@ class HomePage extends React.Component {
                                         </li>
                                     </ul>
                                 </div>
-                                {/* <div className="text-container">
-                                    <span>O</span><span>u</span><span>r</span>
-                                    
-                                    <span>w</span><span>o</span><span>r</span><span>d</span><span>s</span>
-
-                                    <span>h</span><span>a</span><span>v</span><span>e</span>
-                                    
-                                    <span>w</span><span>i</span><span>n</span><span>g</span><span>s</span><span>,</span>
-                                    <br/>
-                                    <span>b</span><span>u</span><span>t</span>
-                                    
-                                    <span>f</span><span>l</span><span>y</span>
-                                    
-                                    <span>n</span><span>o</span><span>t</span>
-                                    
-                                    <span>w</span><span>h</span><span>e</span><span>r</span><span>e</span>
-                                    
-                                    <span>w</span><span>e</span>
-                                    
-                                    <span>w</span><span>o</span><span>u</span><span>l</span><span>d</span><span>.</span>
-                                </div>   */}
-                            
                                 
-
                             </div>
                             
                         </section>

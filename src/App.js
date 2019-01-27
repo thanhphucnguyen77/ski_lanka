@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import AboutUs from './containers/about-us.js';
+
 import { Route, Link } from 'react-router-dom';
-import HomePage from './containers/home.js';
-import ExchangeToken from './containers/exchange-token.js';
-import Affiliate from './containers/affiliate.js';
-import Market from './containers/market.js';
-import ContactUs from './containers/contact-us.js';
+import HomePage from './views/home.js';
+
 
 (function () {
 	'use strict';
@@ -133,23 +130,6 @@ import ContactUs from './containers/contact-us.js';
 class App extends Component {
   render() {
     return (
-      // <div className="App">
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <p>
-      //       Edit <code>src/App.js</code> and save to reload.
-      //     </p>
-      //     <a
-      //       className="App-link"
-      //       href="https://reactjs.org"
-      //       target="_blank"
-      //       rel="noopener noreferrer"
-      //     >
-      //       Learn React
-      //     </a>
-      //   </header>
-      //   <p style={{zIndex: "1000000000", color: "#fff"}}>Hello world</p>
-      // </div>
       <div>
           <header style={{maxWidth: "1000px", margin: "0 auto", position: "relative"}}>
             <img className="logo" src={require('./image/ECO_LOGO.png')} width="50" height="50" />
@@ -160,11 +140,7 @@ class App extends Component {
             </nav>
           </header>
           <Route path="/" exact component={HomePage} />
-          <Route path="/about-us" component={AboutUs} />
-          <Route path="/exchange-token" component={ExchangeToken} />
-          <Route path="/affiliate" component={Affiliate} />
-          <Route path="/market" component={Market} />
-          <Route path="/contact-us" component={ContactUs} />
+          
       </div>
     );
   }
