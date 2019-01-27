@@ -81,11 +81,11 @@ a:hover {
 }
 
 .logo {
-  width: 300px;
+  width: 200px;
   height: 200px;
   position: absolute;
   z-index: 10;
-  left: -80px;
+  left: -50px;
   
 }
 
@@ -109,6 +109,7 @@ a:hover {
   padding: 5px 10px;
   float: right;
   margin-top: 4rem;
+  text-decoration: none;
 }
 
 .authentication a:hover {

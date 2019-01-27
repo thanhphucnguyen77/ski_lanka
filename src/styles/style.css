@@ -196,12 +196,12 @@
 
 .contact-us-content input {
     margin: 1rem 0;
-    width: 200px;
-    height: 40px;
+    width: 300px;
+    height: 35px;
 }
 
 .contact-us-content textarea {
-    width: 200px;
+    width: 300px;
     height: 80px;
 }
 
@@ -228,7 +228,7 @@
 
 /* Effect */
 
-#output{
+#output, #output2{
     /* The command I know best. */
     text-transform:uppercase;
     color:#fdf6f0;

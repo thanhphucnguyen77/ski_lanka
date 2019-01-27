@@ -24,9 +24,9 @@ const charPoses = {
   };
 
   $(document).ready(function(){
-    //var theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
-    var theLetters = "abcdefg&^+=-";
-    var ctnt = "SKI LANKA'S FIRST<br/>CRYPTOCURRENCY TRADING FLATFORM"; // Your text goes here
+    var theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
+    //var theLetters = "abcdefg&^+=-";
+    var ctnt = "SKI LANKA'S FIRST"; // Your text goes here
     var speed = 50; // ms per frame
     var increment = 8; // frames per step. Must be >2
     
@@ -64,6 +64,54 @@ const charPoses = {
       $("#output").html(fixed + block);
       block = "";
     }
+
+
+     var theLetters2 = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
+     //var theLetters2 = "abcdefg&^+=-";
+     var ctnt2 = "CRYPTOCURRENCY TRADING FLATFORM"; // Your text goes here
+     var speed2 = 25; // ms per frame
+     var increment2 = 8; // frames per step. Must be >2
+     
+         
+     var clen2 = ctnt2.length;       
+     var si2 = 0;
+     var stri2 = 0;
+     var block2 = "";
+     var fixed2 = "";
+
+     //Call self x times, whole function wrapped in setTimeout
+    (function rustle2 (i) {          
+        setTimeout(function () {
+          if (--i){rustle2(i);}
+          nextFrame2(i);
+          si2 = si2 + 1;        
+        }, speed2);
+        })(clen2*increment2+1); 
+        function nextFrame2(pos){
+          for (var i=0; i<clen2-stri2; i++) {
+            //Random number
+            var num2 = Math.floor(theLetters2.length * Math.random());
+            //Get random letter
+            var letter2 = theLetters2.charAt(num2);
+            block2 = block2 + letter2;
+          }
+          if (si2 == (increment2-1)){
+            stri2++;
+          }
+          if (si2 == increment2){
+          // Add a letter; 
+          // every speed*10 ms
+          fixed2 = fixed2 +  ctnt2.charAt(stri2 - 1);
+          si2 = 0;
+          }
+          $("#output2").html(fixed2 + block2);
+          block2 = "";
+        }
+    
+
+
+
+
     });
 
 
@@ -85,7 +133,7 @@ class HomePage extends React.Component {
                 isVisibleTitle: false,
                 isVisibleMenu: true
             })
-        }, 25000)
+        }, 8000)
     }
 
     componentDidMount() {
@@ -108,6 +156,7 @@ class HomePage extends React.Component {
                             </SplitText>
                         </h1> */}
                         <div id="output"></div>
+                        <div id="output2"></div>
                     </div>
                 </div>
                 : ""
@@ -306,7 +355,7 @@ class HomePage extends React.Component {
                     
                     
                     </TabPane>
-                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Contact Us</span>} key="5">
+                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Contact us</span>} key="5">
                         <section className="page-content" >
                             <div className="page-content-article-contact">
                                 <div className="contact-us-content">

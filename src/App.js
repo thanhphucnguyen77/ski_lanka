@@ -4,6 +4,7 @@ import './App.css';
 
 import { Route, Link } from 'react-router-dom';
 import HomePage from './views/home.js';
+import Header from './components/Header.js';
 
 
 (function () {
@@ -131,14 +132,7 @@ class App extends Component {
   render() {
     return (
       <div>
-          <header style={{maxWidth: "1000px", margin: "0 auto", position: "relative"}}>
-            <img className="logo" src={require('./image/ECO_LOGO.png')} width="50" height="50" />
-
-            <nav className="authentication">
-              <a href="#">Login</a>
-              <a href="#">Sign up</a>
-            </nav>
-          </header>
+          <Header />
           <Route path="/" exact component={HomePage} />
           
       </div>
