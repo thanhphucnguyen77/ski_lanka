@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "animejs": "^3.0.1",
     "antd": "^3.12.4",
     "css-loader": "^2.1.0",
     "gsap": "^2.0.2",
