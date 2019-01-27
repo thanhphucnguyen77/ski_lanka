@@ -6,6 +6,7 @@ import '../styles/style.css';
 const Navigation = (props) => {
     return (
         <div>
+            <canvas id="canvas" className="canvas"></canvas>
             <nav className="navbar">
                 <ul>
                     <li className={props.isActiveAbout ? "active" : ""}><a href="/about-us">About us</a></li>
