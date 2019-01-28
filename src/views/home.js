@@ -7,6 +7,7 @@ import SplitText from 'react-pose-text';
 import jQuery from 'jquery';
 import '../scss/home.scss';
 import '../App.css';
+import {Row, Col} from 'antd';
 
 
 const TabPane = Tabs.TabPane;
@@ -35,7 +36,7 @@ const charPoses = {
     var theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
     //var theLetters = "abcdefg&^+=-";
     var ctnt = "SKI LANKA'S FIRST"; // Your text goes here
-    var speed = 50; // ms per frame
+    var speed = 30; // ms per frame
     var increment = 8; // frames per step. Must be >2
     
         
@@ -77,7 +78,7 @@ const charPoses = {
      var theLetters2 = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
      //var theLetters2 = "abcdefg&^+=-";
      var ctnt2 = "CRYPTOCURRENCY TRADING FLATFORM"; // Your text goes here
-     var speed2 = 25; // ms per frame
+     var speed2 = 7; // ms per frame
      var increment2 = 8; // frames per step. Must be >2
      
          
@@ -141,7 +142,7 @@ class HomePage extends React.Component {
                 isVisibleTitle: false,
                 isVisibleMenu: true
             })
-        }, 8000)
+        }, 10000)
     }
 
     componentDidMount() {
@@ -192,40 +193,52 @@ class HomePage extends React.Component {
                                     </h1>
                                     <div className="divider"></div>
                                     <ul>
-                                        {/* <li>Spot trading flatform for major digital assets including</li> */}
+                                        {/* <li>Operated by Pelpola Vipassi Foundation.</li> */}
                                         <li className="line1"> 
-                                            <span>S</span><span>p</span><span>o</span><span>t</span>&nbsp;
-                                            <span>t</span><span>r</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp;
-                                            <span>f</span><span>l</span><span>a</span><span>t</span><span>f</span><span>o</span><span>r</span><span>m</span>&nbsp;
-                                            <span>f</span><span>o</span><span>r</span>&nbsp; 
-                                            <span>m</span><span>a</span><span>j</span><span>o</span><span>r</span>&nbsp;
-                                            <span>d</span><span>i</span><span>g</span><span>i</span><span>t</span><span>a</span><span>l</span> &nbsp;
-                                            <span>a</span><span>s</span><span>s</span><span>e</span><span>t</span><span>s</span>&nbsp;
-                                            <span>i</span><span>c</span><span>l</span><span>u</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp;
+                                            <span>O</span><span>p</span><span>e</span><span>r</span><span>a</span><span>t</span><span>e</span><span>d</span>&nbsp;
+                                            <span>b</span><span>y</span>&nbsp;
+                                            <span>P</span><span>e</span><span>l</span><span>p</span><span>o</span><span>l</span><span>a</span>&nbsp;
+                                            <span>V</span><span>i</span><span>p</span><span>a</span><span>s</span><span>s</span><span>i</span>&nbsp;
+                                            <span>F</span><span>o</span><span>n</span><span>d</span><span>a</span><span>t</span><span>i</span><span>o</span>n<span></span> &nbsp;
+                                            
                                         </li>
                                         {/* <li>and more</li> */}
-                                        {/* <li>Three level-system of wallet and multi layered securitty </li> */}
+                                        {/* <li>Profits are used to improve the environment of Sri Lanka through the foundation.</li> */}
                                         <li className="line2">
-                                            <span>T</span><span>h</span><span>r</span><span>e</span><span>e</span>&nbsp;
-                                            <span>l</span><span>e</span><span>v</span><span>e</span><span>l</span><span>-</span><span>s</span><span>y</span><span>s</span><span>t</span><span>e</span><span>m</span>&nbsp;
-                                            <span>o</span><span>f</span>&nbsp;
-                                            <span>w</span><span>a</span><span>l</span><span>l</span><span>e</span><span>t</span>&nbsp;
-                                            <span>a</span><span>d</span>&nbsp;
-                                            <span>m</span><span>u</span><span>l</span><span>t</span><span>i</span>&nbsp;
-                                            <span>l</span><span>a</span><span>y</span><span>e</span><span>r</span><span>e</span><span>d</span>&nbsp;
-                                            <span>s</span><span>e</span><span>c</span><span>u</span><span>r</span><span>i</span><span>t</span><span>y</span>&nbsp;
-                                        </li>
-                                        {/* <li>Liquidity order-book allows users to freely exchange their digital assets</li> */}
-                                        <li className="line3">
-                                            <span>L</span><span>i</span><span>q</span><span>u</span><span>i</span><span>d</span><span>i</span><span>t</span><span>y</span>&nbsp;
-                                            <span>o</span><span>r</span><span>d</span><span>e</span><span>r</span><span>s</span><span>b</span><span>o</span><span>o</span><span>k</span>&nbsp;
-                                            <span>a</span><span>l</span><span>l</span><span>o</span><span>w</span><span>s</span>&nbsp;
-                                            <span>u</span><span>s</span><span>e</span><span>r</span><span>s</span>&nbsp;
+                                            <span>P</span><span>r</span><span>o</span><span>f</span><span>i</span><span>t</span><span>s</span>&nbsp;
+                                            <span>a</span><span>r</span><span>e</span>&nbsp;
+                                            <span>u</span><span>s</span><span>e</span><span>d</span>&nbsp;
                                             <span>t</span><span>o</span>&nbsp;
-                                            <span>f</span><span>r</span><span>e</span><span>e</span><span>l</span><span>y</span>&nbsp;
-                                            <span>e</span><span>x</span><span>c</span><span>h</span><span>a</span><span>n</span><span>g</span><span>e</span>&nbsp;
-                                            <span>t</span><span>h</span><span>e</span><span>i</span><span>r</span>&nbsp;
+                                            <span>t</span><span>h</span><span>e</span>&nbsp;
+                                            <span>e</span><span>n</span><span>v</span><span>i</span><span>r</span><span>o</span><span>n</span><span>m</span><span>e</span><span>n</span><span>t</span>&nbsp;
+                                            <span>o</span><span>f</span>&nbsp;
+                                            <span>S</span><span>r</span><span>i</span>&nbsp;
+                                            <span>L</span><span>a</span><span>n</span><span>k</span><span>a</span>
+                                            <span>t</span><span>h</span><span>r</span><span>o</span><span>u</span><span>g</span><span>h</span>&nbsp;
+                                            <span>t</span><span>h</span><span>e</span>&nbsp;
+                                            <span>f</span><span>o</span><span>n</span><span>d</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span>&nbsp;
                                         </li>
+                                        {/* <li>Spot trading platform for major digital assets including（crypto icons）</li> */}
+                                        <li className="line3">
+                                            <span>S</span><span>p</span><span>o</span><span>t</span>&nbsp;
+                                            <span>t</span><span>r</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp;
+                                            <span>p</span><span>l</span><span>a</span><span>t</span><span>f</span><span>o</span><span>r</span><span>m</span>&nbsp;
+                                            <span>f</span><span>o</span><span>f</span>&nbsp;
+                                            <span>m</span><span>a</span><span>j</span><span>o</span><span>r</span>&nbsp;
+                                            <span>d</span><span>i</span><span>g</span><span>i</span><span>t</span><span>a</span><span>l</span>&nbsp;
+                                            <span>a</span><span>s</span><span>s</span><span>e</span><span>t</span><span>s</span>&nbsp;
+                                            <span>i</span><span>n</span><span>c</span><span>l</span><span>u</span><span>d</span><span>i</span><span>n</span><span>n</span><span>d</span>&nbsp;
+                                            <span>(</span><span>c</span><span>r</span><span>y</span><span>p</span><span>t</span><span>o</span>&nbsp;
+                                            <span>i</span><span>c</span><span>o</span><span>n</span><span>s</span><span>)</span>&nbsp;
+                                        </li>
+
+                                        {/* <li className="line4">
+                                            
+                                        </li>
+
+                                        <li className="line5">
+                                            
+                                        </li> */}
                                     </ul>
                                 </div>
                                 
@@ -237,15 +250,80 @@ class HomePage extends React.Component {
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Exchange Token</span>} key="2">
                         <section className="page-content" >
                             <div className="page-content-article">
-                            
-                                <h1 style={{color: "#fff"}}>EXCHANGE TOKEN(SALA)</h1>
-                                <div className="divider"></div>
-                                <ul style={{color: "#fff"}}>
-                                    <li>Will launch SALA in form of trading mining</li>
-                                    <li>Our mission is to establish an useful exchange token both in-outside of the exchange</li>
-                                    <li>Get discounts on various fees </li>
-                                    <li>More information will be announced shortly, for more details, please check our WhitePaper</li>
-                                </ul>
+                                <Row gutter={32}>
+                                    <Col xs={{span: 14}} sm={{span: 14}} md={{span: 14}} lg={{span: 14}}>
+                                        <h1 style={{color: "#fff"}} className="exchange-title">
+                                                <span>E</span><span>X</span><span>C</span><span>H</span><span>A</span><span>N</span><span>G</span><span>E</span>&nbsp;
+                                                <span>T</span><span>O</span><span>K</span><span>E</span><span>N</span><span>S</span><span>(</span><span>S</span><span>A</span><span>L</span><span>A</span><span>)</span>&nbsp;
+                                            
+            
+                                        </h1>
+                                        <div className="divider"></div>
+                                        <ul style={{color: "#fff"}} className="exchange-content">
+                                            {/* <li>Will launch SALA in form of trading mining</li> */}
+                                            <li className="ex-line1">
+                                                <span>W</span><span>i</span><span>l</span><span>l</span>&nbsp;
+                                                <span>l</span><span>a</span><span>u</span><span>n</span><span>c</span><span>h</span>&nbsp;
+                                                <span>S</span><span>A</span><span>L</span><span>A</span>&nbsp;
+                                                <span>i</span><span>n</span>&nbsp;
+                                                <span>o</span><span>f</span>&nbsp;
+                                                <span>t</span><span>r</span><span>a</span><span>d</span><span>i</span><span>n</span><span>i</span> <span>n</span><span>g</span>&nbsp; 
+                                                <span>m</span><span>i</span><span>n</span><span>i</span><span>n</span><span>g</span>&nbsp;
+                                                
+                                            </li>
+                                            {/* <li>Our mission is to establish an useful exchange token both in-outside of the exchange</li> */}
+                                            <li className="ex-line2">
+                                                <span>O</span><span>u</span><span>r</span>&nbsp;
+                                                <span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span>&nbsp;
+                                                <span>i</span><span>s</span>&nbsp;
+                                                <span>t</span><span>o</span>&nbsp;
+                                                <span>e</span><span>s</span><span>t</span><span>a</span><span>b</span><span>l</span><span>l</span><span>i</span><span>s</span><span>h</span>&nbsp;
+                                                <span>a</span><span>n</span>&nbsp;
+                                                <span>u</span><span>s</span><span>e</span><span>f</span><span>u</span><span>l</span>&nbsp;
+                                                <span>e</span><span>x</span><span>c</span><span>h</span><span>a</span><span>n</span><span>g</span><span>e</span>&nbsp; 
+                                                <span>t</span><span>o</span><span>k</span><span>e</span><span>n</span>&nbsp;
+                                                <span>b</span><span>o</span><span>t</span><span>h</span>&nbsp;
+                                                <span>i</span><span>n</span><span>-</span><span>o</span><span>u</span><span>t</span><span>s</span><span>i</span><span>d</span><span>e</span>&nbsp;
+                                                <span>o</span><span>f</span>&nbsp;
+                                                <span>t</span><span>h</span><span>e</span>&nbsp;
+                                                {/* <span>e</span><span>x</span><span>c</span><span>h</span><span>a</span><span>n</span><span>g</span><span>e</span>&nbsp;  */}
+                                                <span>e</span><span>x</span><span>c</span><span>h</span><span>a</span><span>n</span><span>g</span><span>e</span>
+                                               
+                                                
+                                            </li>
+
+                                            {/* <li>Get discounts on various fees / receive commissions.</li> */}
+                                            <li className="ex-line3">
+                                                <span>G</span><span>e</span><span>t</span>&nbsp;
+                                                <span>d</span><span>i</span><span>s</span><span>c</span><span>o</span><span>n</span><span>t</span>&nbsp;
+                                                <span>o</span><span>n</span>&nbsp;
+                                                <span>v</span><span>a</span><span>r</span><span>i</span><span>o</span><span>u</span><span>s</span>&nbsp;
+                                                <span>f</span><span>e</span><span>e</span>&nbsp;
+                                                <span>/</span>&nbsp;
+                                                <span>r</span><span>e</span><span>v</span><span>e</span><span>i</span><span>v</span><span>e</span>&nbsp;
+                                                <span>c</span><span>o</span><span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>n</span><span>s.</span>&nbsp;
+                                                {/* <span>e</span><span>x</span><span>c</span><span>h</span><span>a</span><span>n</span><span>g</span><span>e</span>&nbsp;  */}
+
+                                            </li>
+                                            {/* <li>For more information, please check our Whitepaper</li> */}
+                                            <li className="ex-line4">
+                                                <span>F</span><span>o</span><span>r</span>&nbsp;
+                                                <span>m</span><span>o</span><span>r</span><span>e</span>&nbsp;
+                                                <span>i</span><span>n</span><span>f</span><span>o</span><span>r</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n,</span>&nbsp;
+                                                <span>p</span><span>l</span><span>e</span><span>a</span><span>s</span><span>e</span>&nbsp;
+                                                <span>c</span><span>h</span><span>e</span><span>c</span><span>k</span>
+                                                <span>o</span><span>u</span><span>r</span>&nbsp;
+                                                <span>W</span><span>h</span><span>i</span><span>t</span><span>e</span><span>p</span><span>a</span><span>p</span><span>e</span><span>r</span>
+                                            </li>
+
+                                        </ul>
+                                    </Col>
+                                    
+                                    <Col xs={{span: 10}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}}  >
+                                        <img src={require("../image/exchange_icon_v5.png")} alt="exchange-icon" width="150" height="150" style={{margin: "5rem 20px"}} />
+                                        <img src={require("../image/mining_icon3.png")} alt="mining-icon" width="150" height="150" style={{marginLeft: "5rem 20px"}} />
+                                    </Col>
+                                </Row>
                             </div>
                         </section>
                     
@@ -254,19 +332,64 @@ class HomePage extends React.Component {
                     <section className="page-content">
                         {/* <section className="page-content-affiliate"></section> */}
                         <div className="page-content-article">
-                            <div className="page-content-col1">
-                                <h1 style={{color: "#fff"}}>Reward for Referrals</h1>
-                                <div className="divider"></div>
-                                <ul style={{color: "#fff"}} >
-                                    <li>Receive up to 100% commission </li>
-                                    <li>Commission rate will depend on your team size. (Team size = Number of users linked to your referral)</li>
-                                    <li>Our model will let you receive reward as low as inviting one friend</li>
-                                </ul>
-                            </div>
-                            {/* <div className="page-content-col2">
-                                <img src={require('../image/mission_slide4.png')} width="300" height="350" style={{display: "block"}} />
-                                
-                            </div> */}
+                
+                                <Row>
+                                    <Col xs={{span: 14}} sm={{span: 14}} md={{span: 14}} lg={{span: 14}}>
+                                        <h1 style={{color: "#fff"}} className="af-title">
+                                                <span>B</span><span>E</span><span>S</span><span>T</span>&nbsp;
+                                                <span>A</span><span>F</span><span>F</span><span>I</span><span>L</span><span>I</span><span>A</span><span>T</span><span>E</span>&nbsp;
+                                                <span>S</span><span>Y</span><span>S</span><span>T</span><span>E</span><span>M</span>&nbsp;
+                                                <span>F</span><span>O</span><span>R</span>&nbsp;
+                                                <span>R</span><span>E</span><span>W</span><span>A</span><span>R</span><span>D</span>&nbsp;
+                                                <span>U</span><span>S</span><span>E</span><span>R</span><span>S</span>&nbsp;
+                                        
+                                        
+                                        </h1>
+                                        <div className="divider"></div>
+                                        <ul style={{color: "#fff"}} className="af-content" >
+                                            {/* <li>Receive up to 100% of transaction fees paid by linked users.  </li> */}
+                                            <li className="af-line1">
+                                                <span>R</span><span>e</span><span>c</span><span>e</span><span>i</span><span>v</span><span>e</span>&nbsp;
+                                                <span>u</span><span>p</span>&nbsp;
+                                                <span>t</span><span>o</span>&nbsp;
+                                                <span>1</span><span>0</span><span>0</span><span>%</span>&nbsp;
+                                                <span>o</span><span>f</span>&nbsp;
+                                                <span>t</span><span>r</span><span>a</span><span>n</span><span>s</span><span>a</span><span>s</span><span>t</span><span>i</span><span>o</span><span>n</span>&nbsp;
+                                                <span>f</span><span>e</span><span>e</span><span>s</span>&nbsp;
+                                                <span>p</span><span>a</span><span>i</span><span>d</span>&nbsp;
+                                                <span>b</span><span>y</span>&nbsp;
+                                                <span>l</span><span>i</span><span>n</span><span>k</span><span>e</span><span>d</span>&nbsp;
+                                                <span>u</span><span>s</span><span>e</span><span>r</span><span>s</span>&nbsp;
+                                            </li>
+                                            {/* <li>Our model even rewards users who invite only one friend.</li> */}
+
+                                            <li className="af-line2">
+                                                <span>O</span><span>u</span><span>r</span>&nbsp;
+                                                <span>m</span><span>o</span><span>d</span><span>e</span><span>l</span>&nbsp;
+                                                <span>e</span><span>v</span><span>e</span><span>n</span>&nbsp;
+                                                <span>r</span><span>e</span><span>w</span><span>a</span><span>r</span><span>d</span>&nbsp;
+                                                <span>u</span><span>s</span><span>e</span><span>r</span><span>s</span>&nbsp;
+                                                <span>w</span><span>h</span><span>o</span>&nbsp;
+                                                <span>i</span><span>n</span><span>v</span><span>i</span><span>t</span><span>e</span>&nbsp;
+                                                <span>o</span><span>n</span><span>l</span><span>y</span>&nbsp;
+                                                <span>o</span><span>n</span><span>e</span>&nbsp;
+                                                <span>f</span><span>r</span><span>e</span><span>e</span><span>n</span><span>d.</span>&nbsp;
+
+                                            </li>
+                                            {/* <li>Easily achieved missions.</li> */}
+                                            <li className="af-line3">
+                                                <span>E</span><span>a</span><span>s</span><span>i</span><span>l</span><span>y</span>&nbsp;
+                                                <span>a</span><span>c</span><span>h</span><span>i</span><span>e</span><span>v</span><span>e</span><span>d</span>&nbsp;
+                                                <span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span>&nbsp;
+                                            
+                                            </li>
+                                        </ul>
+                                    </Col>
+                                    <Col sx={{span: 8}} sm={{span: 8}} md={{span: 8}} lg={{span: 8}}>
+                                        <img src={require("../image/users_icon6.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
+                                    </Col>
+                                </Row>
+                           
                         </div>
                     </section>
                 
