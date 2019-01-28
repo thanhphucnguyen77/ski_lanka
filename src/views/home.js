@@ -151,7 +151,7 @@ class HomePage extends React.Component {
     render() {
     return (
         <div>
-            <canvas id="canvas" className="canvas"></canvas>
+            
             {
                 this.state.isVisibleTitle ? 
                 <div className="container">
