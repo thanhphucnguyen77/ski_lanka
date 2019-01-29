@@ -121,65 +121,48 @@ class HomePage extends React.Component {
         this.state = {
             isVisibleTitle: true,
             isVisibleMenu: false,
-            activeAbout1: false,
-            activeAbout2: false,
-            activeExchange1: false,
-            activeExchange2: false,
-            activeAf1: false,
-            activeAf2: false
+            activeAbout: true,
+            activeExchange: false,
+            activeAf: false
 
         }
         this.callback = this.callback.bind(this)
     }
 
-    callback = (key) => {
-        if (Number(key) === 1) {
-            console.log("key1")
+    callback(key) {
+        console.log("key", key)
+        if (key === '1') {
             this.setState({
-                ...this.state,
-                activeAbout1: true,
-                activeAbout2: true
+                activeAbout: true
             })
         }
         else {
             this.setState({
-                ...this.state,
-                activeAbout1: false,
-                activeAbout2: false,
-                //activeExhange: false
-            })
-        }
-        console.log(key);
-        
-        if (Number(key) === 2) {
-            console.log("setState 2");
-            this.setState({
-                ...this.state,
-                activeExchange1: true,
-                activeExchange2: true
-            })
-        }
-        else {
-            this.setState({
-                ...this.state,
-                activeExchange1: false,
-                activeExchange2: false
+                activeAbout: false
             })
         }
 
-        if (Number(key) === 3) {
-            console.log("setState 3")
+        if (key === '2') {
             this.setState({
-                ...this.state,
-                activeAf1: true,
-                activeAf2: true
+                activeExchange: true
             })
+            console.log({...this.state})
         }
         else {
             this.setState({
-                ...this.state,
-                activeAf1: false,
-                activeAf2: false
+                activeExchange: false
+            })
+        }
+
+        if (key === '3') {
+            this.setState({
+                activeAf: true
+            })
+        }
+
+        else {
+            this.setState({
+                activeAf: false
             })
         }
     }
@@ -222,7 +205,7 @@ class HomePage extends React.Component {
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>About us</span>} key="1" >
                         <section className="page-content-about">
                             <div className="page-content-article">
-                                <div className="page-content-text">
+                                <div className={this.state.activeAbout ? "page-content-text" : ""}>
                                    
                                     <h1 className="about-us-title" style={{color: "#fff"}}>
                                        
@@ -234,6 +217,7 @@ class HomePage extends React.Component {
                                         <span>F</span><span>L</span><span>A</span><span>T</span><span>F</span><span>O</span><span>R</span><span>M</span>
                                     </h1>
                                     <div className="divider"></div>
+                                    {console.log("active about ", this.state.activeAbout)}
                                     <ul className="about-content">
                                         {/* <li>Operated by Pelpola Vipassi Foundation.</li> */}
                                         <li className="line1"> 
@@ -312,7 +296,9 @@ class HomePage extends React.Component {
                             <div className="page-content-article">
                                 <Row gutter={32}>
                                     <Col xs={{span: 14}} sm={{span: 14}} md={{span: 14}} lg={{span: 14}}>
-                                        <div className="exchange-container">
+                                        <div className={this.state.activeExchange ? "exchange-container" : ""}>
+                                      
+                                        
                                         <h1 style={{color: "#fff"}} className="exchange-title">
                                                 <span>E</span><span>X</span><span>C</span><span>H</span><span>A</span><span>N</span><span>G</span><span>E</span>&nbsp;
                                                 <span>T</span><span>O</span><span>K</span><span>E</span><span>N</span><span>S</span><span>(</span><span>S</span><span>A</span><span>L</span><span>A</span><span>)</span>&nbsp;
@@ -320,6 +306,7 @@ class HomePage extends React.Component {
             
                                         </h1>
                                         <div className="divider"></div>
+                                        {console.log("active exchange 2", this.state.activeExchange2)}
                                         <ul style={{color: "#fff"}} className="exchange-content">
                                             {/* <li>Will launch SALA in form of trading mining</li> */}
                                             <li className="ex-line1">
@@ -397,6 +384,8 @@ class HomePage extends React.Component {
                 
                                 <Row>
                                     <Col xs={{span: 15}} sm={{span: 15}} md={{span: 15}} lg={{span: 15}}>
+                                        
+                                        <div className={this.state.activeAf ? "affiliate-container" : ""}>
                                         <h1 style={{color: "#fff"}} className="af-title">
                                                 <span>B</span><span>E</span><span>S</span><span>T</span>&nbsp;
                                                 <span>A</span><span>F</span><span>F</span><span>I</span><span>L</span><span>I</span><span>A</span><span>T</span><span>E</span>&nbsp;
@@ -446,6 +435,7 @@ class HomePage extends React.Component {
                                             
                                             </li>
                                         </ul>
+                                        </div>
                                     </Col>
                                     <Col sx={{span: 9}} sm={{span: 9}} md={{span: 9}} lg={{span: 9}}>
                                         <img src={require("../image/user_bit_coin.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />

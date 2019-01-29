@@ -6,12 +6,12 @@ const Footer = (props) => {
     return (
         <div className="footer-container">
             <Row>
-                <Col span={4}><a href="#">Term of use</a></Col>
-                <Col span={4}><a href="#"> AML&KYC Policy</a></Col>
-                <Col span={4}><a href="#">  Risk Disclosure </a></Col>
-                <Col span={4}><a href="#">Conflicts of interest </a></Col>
-                <Col span={3}><a href="#"> Privacy Policy</a></Col>
-                <Col span={5}><a href="#">Order Excecution Policy</a></Col>
+                <Col span={4}><a>Term of use</a></Col>
+                <Col span={4}><a> AML&KYC Policy</a></Col>
+                <Col span={4}><a>  Risk Disclosure </a></Col>
+                <Col span={4}><a>Conflicts of interest </a></Col>
+                <Col span={3}><a> Privacy Policy</a></Col>
+                <Col span={5}><a>Order Excecution Policy</a></Col>
             </Row>
         </div>
     )
