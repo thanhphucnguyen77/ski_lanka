@@ -382,7 +382,7 @@ class HomePage extends React.Component {
                                     </Col>
                                     
                                     <Col xs={{span: 10}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}}  >
-                                        <img src={require("../image/exchangev2_icon.png")} alt="exchange-icon" width="150" height="150" style={{margin: "5rem 20px"}} />
+                                        <img src={require("../image/exchange_arrow2.png")} alt="exchange-icon" width="150" height="150" style={{margin: "5rem 20px"}} />
                                         <img src={require("../image/mining_icon3.png")} alt="mining-icon" width="150" height="150" style={{marginLeft: "5rem 20px"}} />
                                     </Col>
                                 </Row>
@@ -448,7 +448,7 @@ class HomePage extends React.Component {
                                         </ul>
                                     </Col>
                                     <Col sx={{span: 9}} sm={{span: 9}} md={{span: 9}} lg={{span: 9}}>
-                                        <img src={require("../image/green_user.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
+                                        <img src={require("../image/user_bit_coin.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
                                     </Col>
                                 </Row>
                            
