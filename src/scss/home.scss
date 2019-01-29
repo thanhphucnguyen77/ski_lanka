@@ -27,12 +27,13 @@ div.text-container {
 }
 
 div.page-content-text {
-    span {
-        display: inline-block;
-        opacity: 0;
-        margin: 0;
-    }
+    
     .about-us-title {
+        span {
+          display: inline-block;
+          opacity: 0;
+          margin: 0;
+      }
         @for $i from 1 through 44{
             span:nth-child(#{$i}){
             animation: flyin#{$i} 4s 1 forwards; 
@@ -51,9 +52,14 @@ div.page-content-text {
             }
         }
     }
-    ul {
+    .about-content {
+      span {
+        display: inline-block;
+        opacity: 0;
+        margin: 0;
+      }
         .line1 {
-            @for $i from 1 through 50{
+            @for $i from 1 through 36{
                 span:nth-child(#{$i}){
                   animation: flyin#{$i} 4s 1 forwards; 
                 }
@@ -73,7 +79,7 @@ div.page-content-text {
         }
 
         .line2 {
-            @for $i from 1 through 50{
+            @for $i from 1 through 70{
                 span:nth-child(#{$i}){
                   animation: flyin#{$i} 4s 1 forwards; 
                 }
@@ -93,7 +99,7 @@ div.page-content-text {
         }
 
         .line3 {
-            @for $i from 1 through 65{
+            @for $i from 1 through 63{
                 span:nth-child(#{$i}){
                   animation: flyin#{$i} 4s 1 forwards; 
                 }
@@ -111,11 +117,54 @@ div.page-content-text {
                 }
               }
         }
+
+        .line4 {
+          @for $i from 1 through 62{
+            span:nth-child(#{$i}){
+              animation: flyin#{$i} 4s 1 forwards; 
+            }
+            @keyframes flyin#{$i}{
+              0%{
+                transform: translate(random(700) - 350 + px, random(700) - 350 + px); 
+              }
+              25%{
+               opacity: .1; 
+              }
+              100%{
+                transform: translate(0,0);
+                opacity: 1; 
+              }
+            }
+          }
+        }
+
+      .line5 {
+        @for $i from 1 through 64{
+          span:nth-child(#{$i}){
+            animation: flyin#{$i} 4s 1 forwards; 
+          }
+          @keyframes flyin#{$i}{
+            0%{
+              transform: translate(random(700) - 350 + px, random(700) - 350 + px); 
+            }
+            25%{
+             opacity: .1; 
+            }
+            100%{
+              transform: translate(0,0);
+              opacity: 1; 
+            }
+          }
+        }
+      }
+
     }
 
 }
 
 /* exchange token slide */
+
+.exchange-container {
 
 .exchange-title {
   span {
@@ -229,6 +278,7 @@ div.page-content-text {
   }
 }
 
+}
 /* Affiliate slide */
 
 .af-title {

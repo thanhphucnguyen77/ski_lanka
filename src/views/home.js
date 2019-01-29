@@ -15,13 +15,6 @@ const TabPane = Tabs.TabPane;
 
 
 
-
-
-
-
-function callback(key) {
-  console.log(key);
-}
   
 const charPoses = {
     exit: { opacity: 0, y: 20 },
@@ -116,11 +109,6 @@ const charPoses = {
           $("#output2").html(fixed2 + block2);
           block2 = "";
         }
-    
-
-
-
-
     });
 
 
@@ -132,7 +120,67 @@ class HomePage extends React.Component {
         super(props)
         this.state = {
             isVisibleTitle: true,
-            isVisibleMenu: false
+            isVisibleMenu: false,
+            activeAbout1: false,
+            activeAbout2: false,
+            activeExchange1: false,
+            activeExchange2: false,
+            activeAf1: false,
+            activeAf2: false
+
+        }
+        this.callback = this.callback.bind(this)
+    }
+
+    callback = (key) => {
+        if (Number(key) === 1) {
+            console.log("key1")
+            this.setState({
+                ...this.state,
+                activeAbout1: true,
+                activeAbout2: true
+            })
+        }
+        else {
+            this.setState({
+                ...this.state,
+                activeAbout1: false,
+                activeAbout2: false,
+                //activeExhange: false
+            })
+        }
+        console.log(key);
+        
+        if (Number(key) === 2) {
+            console.log("setState 2");
+            this.setState({
+                ...this.state,
+                activeExchange1: true,
+                activeExchange2: true
+            })
+        }
+        else {
+            this.setState({
+                ...this.state,
+                activeExchange1: false,
+                activeExchange2: false
+            })
+        }
+
+        if (Number(key) === 3) {
+            console.log("setState 3")
+            this.setState({
+                ...this.state,
+                activeAf1: true,
+                activeAf2: true
+            })
+        }
+        else {
+            this.setState({
+                ...this.state,
+                activeAf1: false,
+                activeAf2: false
+            })
         }
     }
 
@@ -157,14 +205,6 @@ class HomePage extends React.Component {
                 this.state.isVisibleTitle ? 
                 <div className="container">
                     <div className="homepage">
-                        {/* <h1>
-                            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-                                SKI LANKA'S FIRST
-                            </SplitText><br/>
-                            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-                                CRYPTOCURRENCY TRADING FLATFORM
-                            </SplitText>
-                        </h1> */}
                         <div id="output"></div>
                         <div id="output2"></div>
                     </div>
@@ -178,28 +218,30 @@ class HomePage extends React.Component {
         
             <div className="container-other-page">
                 <div style={{width: "100%", height: "35px", position: "absolute", top: "500px", boxSizing: "border-box"}}>
-                <Tabs defaultActiveKey="1" onChange={callback}>
-                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>About us</span>} key="1">
+                <Tabs defaultActiveKey="1" onChange={this.callback}>
+                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>About us</span>} key="1" >
                         <section className="page-content-about">
                             <div className="page-content-article">
                                 <div className="page-content-text">
+                                   
                                     <h1 className="about-us-title" style={{color: "#fff"}}>
+                                       
                                         <span>S</span><span>K</span><span>I</span>&nbsp;
                                         <span>L</span><span>A</span><span>N</span><span>K</span><span>A</span><span>'S</span>&nbsp;
                                         <span>F</span><span>I</span><span>R</span><span>S</span><span>T</span><br/>
-                                        <span>C</span><span>R</span><span>Y</span><span>P</span><span>C</span><span>U</span><span>R</span> <span>R</span><span>R</span><span>E</span><span>N</span><span>C</span><span>Y</span>&nbsp;
+                                        <span>C</span><span>R</span><span>Y</span><span>P</span><span>T</span><span>O</span><span>C</span><span>U</span><span>R</span><span>R</span><span>E</span><span>N</span><span>C</span><span>Y</span>&nbsp;
                                         <span>T</span><span>R</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>&nbsp;
                                         <span>F</span><span>L</span><span>A</span><span>T</span><span>F</span><span>O</span><span>R</span><span>M</span>
                                     </h1>
                                     <div className="divider"></div>
-                                    <ul>
+                                    <ul className="about-content">
                                         {/* <li>Operated by Pelpola Vipassi Foundation.</li> */}
                                         <li className="line1"> 
                                             <span>O</span><span>p</span><span>e</span><span>r</span><span>a</span><span>t</span><span>e</span><span>d</span>&nbsp;
                                             <span>b</span><span>y</span>&nbsp;
                                             <span>P</span><span>e</span><span>l</span><span>p</span><span>o</span><span>l</span><span>a</span>&nbsp;
                                             <span>V</span><span>i</span><span>p</span><span>a</span><span>s</span><span>s</span><span>i</span>&nbsp;
-                                            <span>F</span><span>o</span><span>n</span><span>d</span><span>a</span><span>t</span><span>i</span><span>o</span>n<span></span> &nbsp;
+                                            <span>F</span><span>o</span><span>u</span><span>n</span><span>d</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span>&nbsp;
                                             
                                         </li>
                                         {/* <li>and more</li> */}
@@ -213,33 +255,51 @@ class HomePage extends React.Component {
                                             <span>e</span><span>n</span><span>v</span><span>i</span><span>r</span><span>o</span><span>n</span><span>m</span><span>e</span><span>n</span><span>t</span>&nbsp;
                                             <span>o</span><span>f</span>&nbsp;
                                             <span>S</span><span>r</span><span>i</span>&nbsp;
-                                            <span>L</span><span>a</span><span>n</span><span>k</span><span>a</span>
+                                            <span>L</span><span>a</span><span>n</span><span>k</span><span>a</span>&nbsp;
                                             <span>t</span><span>h</span><span>r</span><span>o</span><span>u</span><span>g</span><span>h</span>&nbsp;
                                             <span>t</span><span>h</span><span>e</span>&nbsp;
-                                            <span>f</span><span>o</span><span>n</span><span>d</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span>&nbsp;
+                                            <span>f</span><span>o</span><span>u</span><span>n</span><span>d</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span>&nbsp;
                                         </li>
                                         {/* <li>Spot trading platform for major digital assets including（crypto icons）</li> */}
                                         <li className="line3">
                                             <span>S</span><span>p</span><span>o</span><span>t</span>&nbsp;
                                             <span>t</span><span>r</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp;
                                             <span>p</span><span>l</span><span>a</span><span>t</span><span>f</span><span>o</span><span>r</span><span>m</span>&nbsp;
-                                            <span>f</span><span>o</span><span>f</span>&nbsp;
+                                            <span>f</span><span>o</span><span>r</span>&nbsp;
                                             <span>m</span><span>a</span><span>j</span><span>o</span><span>r</span>&nbsp;
                                             <span>d</span><span>i</span><span>g</span><span>i</span><span>t</span><span>a</span><span>l</span>&nbsp;
                                             <span>a</span><span>s</span><span>s</span><span>e</span><span>t</span><span>s</span>&nbsp;
-                                            <span>i</span><span>n</span><span>c</span><span>l</span><span>u</span><span>d</span><span>i</span><span>n</span><span>n</span><span>d</span>&nbsp;
+                                            <span>i</span><span>n</span><span>c</span><span>l</span><span>u</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp;
                                             <span>(</span><span>c</span><span>r</span><span>y</span><span>p</span><span>t</span><span>o</span>&nbsp;
                                             <span>i</span><span>c</span><span>o</span><span>n</span><span>s</span><span>)</span>&nbsp;
                                         </li>
-
-                                        {/* <li className="line4">
-                                            
+                                        
+                                        {/* <li>Three-level system of wallets and multiple securities including 2FA.</li> */}
+                                        <li className="line4">
+                                            <span>T</span><span>h</span><span>r</span><span>e</span><span>e</span><span>-</span><span>l</span><span>e</span><span>v</span><span>e</span><span>l</span>&nbsp;
+                                            <span>s</span><span>y</span><span>s</span><span>t</span><span>e</span><span>m</span>&nbsp;
+                                            <span>o</span><span>f</span>&nbsp;
+                                            <span>w</span><span>a</span><span>l</span><span>l</span><span>e</span><span>t</span><span>s</span>&nbsp;
+                                            <span>a</span><span>n</span><span>d</span>&nbsp;
+                                            <span>m</span><span>u</span><span>l</span><span>t</span><span>i</span><span>p</span><span>l</span><span>e</span>&nbsp;
+                                            <span>s</span><span>e</span><span>c</span><span>u</span><span>r</span><span>i</span><span>t</span><span>i</span><span>e</span><span>s</span>&nbsp;
+                                            <span>i</span><span>n</span><span>c</span><span>l</span><span>u</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp;
+                                            <span>2</span><span>F</span><span>A</span>&nbsp;
                                         </li>
-
+                                        {/* <li>High liquidity order-book allows users to freely exchange digital assets.</li> */}
                                         <li className="line5">
-                                            
-                                        </li> */}
+                                            <span>H</span><span>i</span><span>g</span><span>h</span>&nbsp;
+                                            <span>l</span><span>i</span><span>q</span><span>u</span><span>i</span><span>d</span><span>i</span><span>t</span><span>y</span>&nbsp;
+                                            <span>o</span><span>r</span><span>d</span><span>e</span><span>r</span><span>-</span><span>b</span><span>o</span><span>o</span><span>k</span>&nbsp;
+                                            <span>a</span><span>l</span><span>l</span><span>o</span><span>w</span><span>s</span>&nbsp;
+                                            <span>t</span><span>o</span>&nbsp;
+                                            <span>f</span><span>r</span><span>e</span><span>e</span><span>l</span><span>y</span>&nbsp;
+                                            <span>e</span><span>x</span><span>c</span><span>h</span><span>a</span><span>n</span><span>g</span><span>e</span>&nbsp;
+                                            <span>d</span><span>i</span><span>g</span><span>i</span><span>t</span><span>a</span><span>l</span>&nbsp;
+                                            <span>a</span><span>s</span><span>s</span><span>e</span><span>t</span><span>s</span>&nbsp;
+                                        </li>
                                     </ul>
+                                
                                 </div>
                                 
                             </div>
@@ -252,6 +312,7 @@ class HomePage extends React.Component {
                             <div className="page-content-article">
                                 <Row gutter={32}>
                                     <Col xs={{span: 14}} sm={{span: 14}} md={{span: 14}} lg={{span: 14}}>
+                                        <div className="exchange-container">
                                         <h1 style={{color: "#fff"}} className="exchange-title">
                                                 <span>E</span><span>X</span><span>C</span><span>H</span><span>A</span><span>N</span><span>G</span><span>E</span>&nbsp;
                                                 <span>T</span><span>O</span><span>K</span><span>E</span><span>N</span><span>S</span><span>(</span><span>S</span><span>A</span><span>L</span><span>A</span><span>)</span>&nbsp;
@@ -267,7 +328,7 @@ class HomePage extends React.Component {
                                                 <span>S</span><span>A</span><span>L</span><span>A</span>&nbsp;
                                                 <span>i</span><span>n</span>&nbsp;
                                                 <span>o</span><span>f</span>&nbsp;
-                                                <span>t</span><span>r</span><span>a</span><span>d</span><span>i</span><span>n</span><span>i</span> <span>n</span><span>g</span>&nbsp; 
+                                                <span>t</span><span>r</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp; 
                                                 <span>m</span><span>i</span><span>n</span><span>i</span><span>n</span><span>g</span>&nbsp;
                                                 
                                             </li>
@@ -295,13 +356,13 @@ class HomePage extends React.Component {
                                             {/* <li>Get discounts on various fees / receive commissions.</li> */}
                                             <li className="ex-line3">
                                                 <span>G</span><span>e</span><span>t</span>&nbsp;
-                                                <span>d</span><span>i</span><span>s</span><span>c</span><span>o</span><span>n</span><span>t</span>&nbsp;
+                                                <span>d</span><span>i</span><span>s</span><span>c</span><span>o</span><span>u</span><span>n</span><span>t</span><span>s</span>&nbsp;
                                                 <span>o</span><span>n</span>&nbsp;
                                                 <span>v</span><span>a</span><span>r</span><span>i</span><span>o</span><span>u</span><span>s</span>&nbsp;
-                                                <span>f</span><span>e</span><span>e</span>&nbsp;
+                                                <span>f</span><span>e</span><span>e</span><span>s</span>&nbsp;
                                                 <span>/</span>&nbsp;
                                                 <span>r</span><span>e</span><span>v</span><span>e</span><span>i</span><span>v</span><span>e</span>&nbsp;
-                                                <span>c</span><span>o</span><span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>n</span><span>s.</span>&nbsp;
+                                                <span>c</span><span>o</span><span>m</span><span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span><span>s.</span>&nbsp;
                                                 {/* <span>e</span><span>x</span><span>c</span><span>h</span><span>a</span><span>n</span><span>g</span><span>e</span>&nbsp;  */}
 
                                             </li>
@@ -311,16 +372,17 @@ class HomePage extends React.Component {
                                                 <span>m</span><span>o</span><span>r</span><span>e</span>&nbsp;
                                                 <span>i</span><span>n</span><span>f</span><span>o</span><span>r</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n,</span>&nbsp;
                                                 <span>p</span><span>l</span><span>e</span><span>a</span><span>s</span><span>e</span>&nbsp;
-                                                <span>c</span><span>h</span><span>e</span><span>c</span><span>k</span>
+                                                <span>c</span><span>h</span><span>e</span><span>c</span><span>k</span>&nbsp;
                                                 <span>o</span><span>u</span><span>r</span>&nbsp;
                                                 <span>W</span><span>h</span><span>i</span><span>t</span><span>e</span><span>p</span><span>a</span><span>p</span><span>e</span><span>r</span>
                                             </li>
 
                                         </ul>
+                                        </div>
                                     </Col>
                                     
                                     <Col xs={{span: 10}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}}  >
-                                        <img src={require("../image/exchange_icon_v5.png")} alt="exchange-icon" width="150" height="150" style={{margin: "5rem 20px"}} />
+                                        <img src={require("../image/exchangev2_icon.png")} alt="exchange-icon" width="150" height="150" style={{margin: "5rem 20px"}} />
                                         <img src={require("../image/mining_icon3.png")} alt="mining-icon" width="150" height="150" style={{marginLeft: "5rem 20px"}} />
                                     </Col>
                                 </Row>
@@ -334,7 +396,7 @@ class HomePage extends React.Component {
                         <div className="page-content-article">
                 
                                 <Row>
-                                    <Col xs={{span: 14}} sm={{span: 14}} md={{span: 14}} lg={{span: 14}}>
+                                    <Col xs={{span: 15}} sm={{span: 15}} md={{span: 15}} lg={{span: 15}}>
                                         <h1 style={{color: "#fff"}} className="af-title">
                                                 <span>B</span><span>E</span><span>S</span><span>T</span>&nbsp;
                                                 <span>A</span><span>F</span><span>F</span><span>I</span><span>L</span><span>I</span><span>A</span><span>T</span><span>E</span>&nbsp;
@@ -354,7 +416,7 @@ class HomePage extends React.Component {
                                                 <span>t</span><span>o</span>&nbsp;
                                                 <span>1</span><span>0</span><span>0</span><span>%</span>&nbsp;
                                                 <span>o</span><span>f</span>&nbsp;
-                                                <span>t</span><span>r</span><span>a</span><span>n</span><span>s</span><span>a</span><span>s</span><span>t</span><span>i</span><span>o</span><span>n</span>&nbsp;
+                                                <span>t</span><span>r</span><span>a</span><span>n</span><span>s</span><span>a</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span>&nbsp;
                                                 <span>f</span><span>e</span><span>e</span><span>s</span>&nbsp;
                                                 <span>p</span><span>a</span><span>i</span><span>d</span>&nbsp;
                                                 <span>b</span><span>y</span>&nbsp;
@@ -373,7 +435,7 @@ class HomePage extends React.Component {
                                                 <span>i</span><span>n</span><span>v</span><span>i</span><span>t</span><span>e</span>&nbsp;
                                                 <span>o</span><span>n</span><span>l</span><span>y</span>&nbsp;
                                                 <span>o</span><span>n</span><span>e</span>&nbsp;
-                                                <span>f</span><span>r</span><span>e</span><span>e</span><span>n</span><span>d.</span>&nbsp;
+                                                <span>f</span><span>r</span><span>i</span><span>e</span><span>n</span><span>d.</span>&nbsp;
 
                                             </li>
                                             {/* <li>Easily achieved missions.</li> */}
@@ -385,8 +447,8 @@ class HomePage extends React.Component {
                                             </li>
                                         </ul>
                                     </Col>
-                                    <Col sx={{span: 8}} sm={{span: 8}} md={{span: 8}} lg={{span: 8}}>
-                                        <img src={require("../image/users_icon6.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
+                                    <Col sx={{span: 9}} sm={{span: 9}} md={{span: 9}} lg={{span: 9}}>
+                                        <img src={require("../image/green_user.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
                                     </Col>
                                 </Row>
                            

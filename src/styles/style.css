@@ -275,6 +275,31 @@
     color: red;
 }
 
+/* footer */
+
+.footer-container {
+  width: 1000px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.footer-container a {
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.footer-container a:hover {
+  border-bottom: 3px solid #128732;
+}
+
+
+
 /* moving letter  */
 
 /* div.text-container span {

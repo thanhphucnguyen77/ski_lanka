@@ -5,6 +5,7 @@ import './App.css';
 import { Route, Link } from 'react-router-dom';
 import HomePage from './views/home.js';
 import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 //import Navigation from './components/navigation.js';
 
 
@@ -141,6 +142,7 @@ class App extends Component {
       <div>
           <Header />
           <Route path="/" exact component={HomePage} />
+					<Footer />
           {/* <Route path="/navigation" component={Navigation} /> */}
       </div>
     );
