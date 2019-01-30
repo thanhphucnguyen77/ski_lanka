@@ -13,7 +13,7 @@
     /* background-color: black; */
     max-width: 1000px;
     color: #fff;
-    min-height: 450px;
+    min-height: 420px;
     margin-top: -15px;
 
 }
@@ -68,6 +68,7 @@
     box-sizing: border-box;
     text-align: center;
     height: auto;
+    font-family: 'Prata', serif;
 
 }
 
@@ -207,10 +208,11 @@
 
 .send {
     padding: 10px 20px;
-    background-color: black;
+    background-color: #128732;
     color: #fff;
-    border: 2px solid #fff;
+    border: 2px solid green;
     margin: 1rem 0;
+    border-radius: 20px;
 }
 
 .page-content-article-contact {
@@ -242,14 +244,23 @@
 
   /* Market tab */
 
+  .table-market {
+    height: 380px;
+  }
+
   .table-market th,td {
     border-bottom: 1px solid grey;
-    padding: 10px 1rem 10px 2rem;
+    padding: 8px 1rem 8px 2rem;
     border-collapse: collapse;
 }
 
 .table-market td {
     border-bottom: 1px solid black; 
+}
+
+.table-market td:last-child {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .bitcoin {
@@ -278,30 +289,37 @@
 /* footer */
 
 .footer-container {
-  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   /* position: absolute; */
   position: fixed;
-  bottom: 20px;
+  bottom: 0;
   left: 0;
   right: 0;
   text-align: center;
+  background-color: black;
+  height: 40px;
+
 }
 
-/* .footer-container Col {
-  text-align: center;
-} */
+.footer-link {
+  width: 60%;
+  float: right;
+  padding: 10px 0;
+}
 
-.footer-container a {
+.footer-link a {
   color: #fff;
-  font-size: 13px;
+  font-size: 10px;
   text-align: center;
   font-weight: bold;
-  padding: 10px 0;
-  
+  padding: 2rem 10px;
+  text-decoration: none;
+  font-family: 'Prata', serif;
+  color: gray;
 }
 
-.footer-container a:hover {
+.footer-link a:hover {
   border-bottom: 3px solid #128732;
 }
 

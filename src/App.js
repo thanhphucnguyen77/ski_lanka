@@ -142,7 +142,7 @@ class App extends Component {
       <div>
           <Header />
           <Route path="/" exact component={HomePage} />
-					<Footer />
+					{/* <Footer /> */}
           {/* <Route path="/navigation" component={Navigation} /> */}
       </div>
     );
