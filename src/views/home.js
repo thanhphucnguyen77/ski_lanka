@@ -190,6 +190,7 @@ class HomePage extends React.Component {
                     <div className="homepage">
                         <div id="output" style={{fontSize: "40px"}}></div>
                         <div id="output2" style={{fontSize: "40px"}}></div>
+                        <div style={{color: "#128732", fontSize: "45px", fontWeight: "bold"}}>ECO</div>
                     </div>
                 </div>
                 : ""
@@ -222,7 +223,7 @@ class HomePage extends React.Component {
                                     <ul className="about-content">
                                         {/* <li>Operated by Pelpola Vipassi Foundation.</li> */}
                                         <li className="line1"> 
-                                            <img src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} />
+                                            <img className="image-effect" src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} />
                                             <span>O</span><span>p</span><span>e</span><span>r</span><span>a</span><span>t</span><span>e</span><span>d</span>&nbsp;
                                             <span>b</span><span>y</span>&nbsp;
                                             <a href="https://www.pelpolavipassifoundation.org/" style={{textDecoration: "underline", fontWeight: "bold", color: "#fff"}}><span>P</span><span>e</span><span>l</span><span>p</span><span>o</span><span>l</span><span>a</span>&nbsp;
@@ -233,7 +234,7 @@ class HomePage extends React.Component {
                                         {/* <li>and more</li> */}
                                         {/* <li>Profits are used to improve the environment of Sri Lanka through the foundation.</li> */}
                                         <li className="line2">
-                                            <img src={require('../image/ethereum.png')} style={{margin: "0 10px 0 0"}} />
+                                            <img className="image-effect" src={require('../image/ethereum.png')} style={{margin: "0 10px 0 0"}} />
                                             <span>P</span><span>r</span><span>o</span><span>f</span><span>i</span><span>t</span><span>s</span>&nbsp;
                                             <span>a</span><span>r</span><span>e</span>&nbsp;
                                             <span>u</span><span>s</span><span>e</span><span>d</span>&nbsp;
@@ -249,7 +250,7 @@ class HomePage extends React.Component {
                                         </li>
                                         {/* <li>Spot trading platform for major digital assets including（crypto icons）</li> */}
                                         <li className="line3">
-                                            <img src={require('../image/ripple.png')} style={{margin: "0 10px 0 0"}} />
+                                            <img className="image-effect" src={require('../image/ripple.png')} style={{margin: "0 10px 0 0"}} />
                                             <span>S</span><span>p</span><span>o</span><span>t</span>&nbsp;
                                             <span>t</span><span>r</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp;
                                             <span>p</span><span>l</span><span>a</span><span>t</span><span>f</span><span>o</span><span>r</span><span>m</span>&nbsp;
@@ -264,7 +265,7 @@ class HomePage extends React.Component {
                                         
                                         {/* <li>Three-level system of wallets and multiple securities including 2FA.</li> */}
                                         <li className="line4">
-                                            <img src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} />
+                                            <img className="image-effect" src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} />
                                             <span>T</span><span>h</span><span>r</span><span>e</span><span>e</span><span>-</span><span>l</span><span>e</span><span>v</span><span>e</span><span>l</span>&nbsp;
                                             <span>s</span><span>y</span><span>s</span><span>t</span><span>e</span><span>m</span>&nbsp;
                                             <span>o</span><span>f</span>&nbsp;
@@ -277,7 +278,7 @@ class HomePage extends React.Component {
                                         </li>
                                         {/* <li>High liquidity order-book allows users to freely exchange digital assets.</li> */}
                                         <li className="line5">
-                                            <img src={require('../image/ethereum.png')} style={{margin: "0 10px 0 0"}} />
+                                            <img className="image-effect" src={require('../image/ethereum.png')} style={{margin: "0 10px 0 0"}} />
                                             <span>H</span><span>i</span><span>g</span><span>h</span>&nbsp;
                                             <span>l</span><span>i</span><span>q</span><span>u</span><span>i</span><span>d</span><span>i</span><span>t</span><span>y</span>&nbsp;
                                             <span>o</span><span>r</span><span>d</span><span>e</span><span>r</span><span>-</span><span>b</span><span>o</span><span>o</span><span>k</span>&nbsp;
@@ -300,9 +301,10 @@ class HomePage extends React.Component {
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Exchange Token</span>} key="2">
                         <section className="page-content" >
                             <div className="page-content-article">
+                                <div className={this.state.activeExchange ? "exchange-container" : ""}>
                                 <Row gutter={32}>
                                     <Col xs={{span: 14}} sm={{span: 14}} md={{span: 14}} lg={{span: 14}}>
-                                        <div className={this.state.activeExchange ? "exchange-container" : ""}>
+                                       
                                       
                                         
                                         <h1 style={{color: "#fff"}} className="exchange-title">
@@ -316,7 +318,7 @@ class HomePage extends React.Component {
                                         <ul style={{color: "#fff"}} className="exchange-content">
                                             {/* <li>Will launch SALA in form of trading mining</li> */}
                                             <li className="ex-line1">
-                                                <img src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} />
+                                                <img className="ex-image-effect" src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} />
                                                 <span>W</span><span>i</span><span>l</span><span>l</span>&nbsp;
                                                 <span>l</span><span>a</span><span>u</span><span>n</span><span>c</span><span>h</span>&nbsp;
                                                 <span>S</span><span>A</span><span>L</span><span>A</span>&nbsp;
@@ -328,7 +330,7 @@ class HomePage extends React.Component {
                                             </li>
                                             {/* <li>Our mission is to establish an useful exchange token both in-outside of the exchange</li> */}
                                             <li className="ex-line2">
-                                                <img src={require('../image/ethereum.png')} style={{margin: "0 10px 0 0"}} />
+                                                <img className="ex-image-effect" src={require('../image/ethereum.png')} style={{margin: "0 10px 0 0"}} />
                                                 <span>O</span><span>u</span><span>r</span>&nbsp;
                                                 <span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span>&nbsp;
                                                 <span>i</span><span>s</span>&nbsp;
@@ -350,7 +352,7 @@ class HomePage extends React.Component {
 
                                             {/* <li>Get discounts on various fees / receive commissions.</li> */}
                                             <li className="ex-line3">
-                                                <img src={require('../image/ripple.png')} style={{margin: "0 10px 0 0"}} />
+                                                <img className="ex-image-effect" src={require('../image/ripple.png')} style={{margin: "0 10px 0 0"}} />
                                                 <span>G</span><span>e</span><span>t</span>&nbsp;
                                                 <span>d</span><span>i</span><span>s</span><span>c</span><span>o</span><span>u</span><span>n</span><span>t</span><span>s</span>&nbsp;
                                                 <span>o</span><span>n</span>&nbsp;
@@ -364,7 +366,7 @@ class HomePage extends React.Component {
                                             </li>
                                             {/* <li>For more information, please check our Whitepaper</li> */}
                                             <li className="ex-line4">
-                                                <img src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} />
+                                                <img className="ex-image-effect" src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} />
                                                 <span>F</span><span>o</span><span>r</span>&nbsp;
                                                 <span>m</span><span>o</span><span>r</span><span>e</span>&nbsp;
                                                 <span>i</span><span>n</span><span>f</span><span>o</span><span>r</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n,</span>&nbsp;
@@ -375,16 +377,17 @@ class HomePage extends React.Component {
                                             </li>
 
                                         </ul>
-                                        </div>
+                                        
                                     </Col>
                                     
                                     <Col xs={{span: 10}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}}  >
                                         <div style={{position: "relative", height: "300px", width: "350px"}}>
-                                            <img src={require("../image/exchange_4coin.png")} alt="exchange-icon" width="150" height="150" style={{position: "absolute", top: "0", left: "0"}} />
-                                            <img src={require("../image/mining_v2.png")} alt="mining-icon" width="150" height="150" style={{position: "absolute", bottom: "0", right: "0"}} />
+                                            <img className="ex-image-effect" src={require("../image/exchange_4coin.png")} alt="exchange-icon" width="150" height="150" style={{position: "absolute", top: "0", left: "0"}} />
+                                            <img className="ex-image-effect" src={require("../image/mining_v2.png")} alt="mining-icon" width="150" height="150" style={{position: "absolute", bottom: "0", right: "0"}} />
                                         </div>
                                     </Col>
                                 </Row>
+                                </div>
                             </div>
                         </section>
                     
@@ -393,11 +396,11 @@ class HomePage extends React.Component {
                     <section className="page-content">
                         {/* <section className="page-content-affiliate"></section> */}
                         <div className="page-content-article">
-                
+                            <div className={this.state.activeAf ? "affiliate-container" : ""}>
                                 <Row>
                                     <Col xs={{span: 15}} sm={{span: 15}} md={{span: 15}} lg={{span: 15}}>
                                         
-                                        <div className={this.state.activeAf ? "affiliate-container" : ""}>
+                                        
                                         <h1 style={{color: "#fff"}} className="af-title">
                                                 <span>B</span><span>E</span><span>S</span><span>T</span>&nbsp;
                                                 <span>A</span><span>F</span><span>F</span><span>I</span><span>L</span><span>I</span><span>A</span><span>T</span><span>E</span>&nbsp;
@@ -412,7 +415,7 @@ class HomePage extends React.Component {
                                         <ul style={{color: "#fff"}} className="af-content" >
                                             {/* <li>Receive up to 100% of transaction fees paid by linked users.  </li> */}
                                             <li className="af-line1">
-                                                <img src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} />
+                                                <img className="af-image-effect" src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} />
                                                 <span>R</span><span>e</span><span>c</span><span>e</span><span>i</span><span>v</span><span>e</span>&nbsp;
                                                 <span>u</span><span>p</span>&nbsp;
                                                 <span>t</span><span>o</span>&nbsp;
@@ -428,7 +431,7 @@ class HomePage extends React.Component {
                                             {/* <li>Our model even rewards users who invite only one friend.</li> */}
 
                                             <li className="af-line2">
-                                                 <img src={require('../image/ethereum.png')} style={{margin: "0 10px 0 0"}} />
+                                                 <img className="af-image-effect" src={require('../image/ethereum.png')} style={{margin: "0 10px 0 0"}} />
                                                 <span>O</span><span>u</span><span>r</span>&nbsp;
                                                 <span>m</span><span>o</span><span>d</span><span>e</span><span>l</span>&nbsp;
                                                 <span>e</span><span>v</span><span>e</span><span>n</span>&nbsp;
@@ -443,19 +446,20 @@ class HomePage extends React.Component {
                                             </li>
                                             {/* <li>Easily achieved missions.</li> */}
                                             <li className="af-line3">
-                                                <img src={require('../image/ripple.png')} style={{margin: "0 10px 0 0"}} />
+                                                <img className="af-image-effect" src={require('../image/ripple.png')} style={{margin: "0 10px 0 0"}} />
                                                 <span>E</span><span>a</span><span>s</span><span>i</span><span>l</span><span>y</span>&nbsp;
                                                 <span>a</span><span>c</span><span>h</span><span>i</span><span>e</span><span>v</span><span>e</span><span>d</span>&nbsp;
                                                 <span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span>&nbsp;
                                             
                                             </li>
                                         </ul>
-                                        </div>
+                                        
                                     </Col>
                                     <Col sx={{span: 9}} sm={{span: 9}} md={{span: 9}} lg={{span: 9}}>
-                                        <img src={require("../image/user_bit_coin.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
+                                        <img className="af-image-effect" src={require("../image/user_bit_coin.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
                                     </Col>
                                 </Row>
+                            </div>
                            
                         </div>
                     </section>

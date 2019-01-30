@@ -27,6 +27,35 @@ div.text-container {
 }
 
 div.page-content-text {
+
+  .image-effect {
+
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 10s;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  @-webkit-keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
     
     .about-us-title {
         span {
@@ -171,6 +200,36 @@ div.page-content-text {
 
 .exchange-container {
 
+
+  .ex-image-effect {
+
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 10s;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  @-webkit-keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
 .exchange-title {
   span {
     display: inline-block;
@@ -291,6 +350,35 @@ div.page-content-text {
 /* Affiliate slide */
 
 .affiliate-container {
+
+  .af-image-effect {
+
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: appear;
+    animation-duration: 10s;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  @-webkit-keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 
 .af-title {
   span {
