@@ -7,6 +7,32 @@
     position: relative;
     z-index: 10;
     top: -320px;
+    -webkit-animation-name: slide-effect;
+    -webkit-animation-duration: 3s;
+    animation-name: slide-effect;
+    animation-duration: 4s;
+}
+
+@keyframes slide-effect {
+  0% {
+    /* opacity: 0; */
+    
+    left: 2000px;
+  }
+  100% {
+    /* opacity: 1 */
+    left: 0;
+    top: -320px;
+  }
+}
+
+@-webkit-keyframes slide-effect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1
+  }
 }
 
 .page-content {
@@ -33,7 +59,7 @@
 .page-content-article .divider {
     border-bottom: 2px solid #fff;
     width: 80px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .page-content-article li {

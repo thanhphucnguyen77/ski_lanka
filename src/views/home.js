@@ -366,7 +366,7 @@ class HomePage extends React.Component {
                             <div className="page-content-article">
                                 <div className={this.state.activeExchange ? "exchange-container" : ""}>
                                 <Row gutter={32}>
-                                    <Col xs={{span: 13}} sm={{span: 13}} md={{span: 13}} lg={{span: 13}}>
+                                    <Col xs={{span: 14}} sm={{span: 14}} md={{span: 14}} lg={{span: 14}}>
                                        
                                       
                                         
@@ -443,8 +443,8 @@ class HomePage extends React.Component {
                                         
                                     </Col>
                                     
-                                    <Col xs={{span: 11}} sm={{span: 11}} md={{span: 11}} lg={{span: 11}}  >
-                                        <div style={{position: "relative", height: "300px", width: "390px"}}>
+                                    <Col xs={{span: 10}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}}  >
+                                        <div style={{position: "relative", height: "300px", width: "350px"}}>
                                             <img className="ex-image-effect" src={require("../image/exchange_4coin.png")} alt="exchange-icon" width="150" height="150" style={{position: "absolute", top: "0", left: "0"}} />
                                             <img className="ex-image-effect" src={require("../image/mining_v2.png")} alt="mining-icon" width="150" height="150" style={{position: "absolute", bottom: "0", right: "0"}} />
                                         </div>
@@ -519,7 +519,7 @@ class HomePage extends React.Component {
                                         
                                     </Col>
                                     <Col sx={{span: 9}} sm={{span: 9}} md={{span: 9}} lg={{span: 9}}>
-                                        <img className="af-image-effect" src={require("../image/user_bit_coin.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
+                                        <img className="af-image-effect" src={require("../image/user_coin4.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
                                     </Col>
                                 </Row>
                             </div>
@@ -629,7 +629,7 @@ class HomePage extends React.Component {
                                     <input type="text" placeholder="Name" width="400" height="100" /><br/>
                                     <input type="text" placeholder="Email" width="400" height="100" /><br/>
                                     <textarea type="text" placeholder="Questions"></textarea><br/>
-                                    <button className="send">Send > </button>
+                                    <button className="send">Send &gt; </button>
                                     <p>For listing tokens on ECO, please submit our listing application form from <a href="https://goo.gl/forms/W6oZ2hpbgHn2VApE3" style={{color: "#fff", textDecoration: "underline"}} >here.</a></p>
                                 </div>
                             </div>
