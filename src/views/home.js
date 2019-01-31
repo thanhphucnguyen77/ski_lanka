@@ -123,7 +123,8 @@ class HomePage extends React.Component {
             isVisibleMenu: false,
             activeAbout: true,
             activeExchange: false,
-            activeAf: false
+            activeAf: false,
+            disappearTitle: false
 
         }
         this.callback = this.callback.bind(this)
@@ -176,8 +177,17 @@ class HomePage extends React.Component {
         }, 10000)
     }
 
+    unDisplayTitle = () => {
+        setTimeout(() => {
+            this.setState({
+                disappearTitle: true
+            })
+        }, 6000)
+    }
+
     componentDidMount() {
         this.displayMenu();
+        this.unDisplayTitle();
     }
 
     render() {
@@ -188,8 +198,8 @@ class HomePage extends React.Component {
                 this.state.isVisibleTitle ? 
                 <div className="container">
                     <div className="homepage">
-                        <div id="output" style={{fontSize: "40px"}}></div>
-                        <div id="output2" style={{fontSize: "40px"}}></div>
+                        <div id={this.state.disappearTitle === false ? "output" : "disappearing1"} style={{fontSize: "40px"}}></div>
+                        <div id={this.state.disappearTitle === false ? "output2" : "disappearing2"} style={{fontSize: "40px"}}></div>
                         <div style={{color: "#128732", fontSize: "45px", fontWeight: "bold"}}>ECO</div>
                     </div>
                 </div>

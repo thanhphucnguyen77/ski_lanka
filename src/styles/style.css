@@ -235,12 +235,46 @@
     text-transform:uppercase;
     color:#fdf6f0;
     /* font-size:6em; */
-    font-size: 60px;
+    font-size: 45px;
     font-weight:bold;
     /* text-align:left; */
     /* text-shadow:0.08em 0em #940f08; */
     text-align: center;
+    font-family: 'Prata', serif;
   }
+
+#disappearing1, #disappearing2 {
+  color: #fff;
+  font-family: 'Prata', serif;
+  font-size: 45px;
+  font-weight: bold;
+  -webkit-animation-name: disappear;
+  -webkit-animation-duration: 4s;
+  animation-name: disappear;
+  animation-duration: 4s;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@-webkit-keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 
   /* Market tab */
 
