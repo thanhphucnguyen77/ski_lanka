@@ -71,7 +71,7 @@ const charPoses = {
 
      var theLetters2 = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
      //var theLetters2 = "abcdefg&^+=-";
-     var ctnt2 = "CRYPTOCURRENCY TRADING FLATFORM"; // Your text goes here
+     var ctnt2 = "CRYPTOCURRENCY TRADING PLATFORM"; // Your text goes here
      var speed2 = 10; // ms per frame
      var increment2 = 8; // frames per step. Must be >2
      
@@ -264,7 +264,8 @@ class HomePage extends React.Component {
                         <section className="page-content-about">
                             <div className="page-content-article">
                                 <div className={this.state.activeAbout ? "page-content-text" : ""}>
-                                   
+                                   <Row>
+                                       <Col xs={{span: 15}} sm={{span: 15}} md={{span: 15}} lg={{span: 15}}>
                                     <h1 className="about-us-title" style={{color: "#fff"}}>
                                        
                                         <span>S</span><span>K</span><span>I</span>&nbsp;
@@ -272,7 +273,7 @@ class HomePage extends React.Component {
                                         <span>F</span><span>I</span><span>R</span><span>S</span><span>T</span><br/>
                                         <span>C</span><span>R</span><span>Y</span><span>P</span><span>T</span><span>O</span><span>C</span><span>U</span><span>R</span><span>R</span><span>E</span><span>N</span><span>C</span><span>Y</span>&nbsp;
                                         <span>T</span><span>R</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>&nbsp;
-                                        <span>F</span><span>L</span><span>A</span><span>T</span><span>F</span><span>O</span><span>R</span><span>M</span>
+                                        <span>P</span><span>L</span><span>A</span><span>T</span><span>F</span><span>O</span><span>R</span><span>M</span>
                                     </h1>
                                     <div className="divider"></div>
                                     {console.log("active about ", this.state.activeAbout)}
@@ -353,7 +354,12 @@ class HomePage extends React.Component {
                                             <span>a</span><span>s</span><span>s</span><span>e</span><span>t</span><span>s</span>&nbsp;
                                         </li>
                                     </ul>
-                                
+                                    </Col>
+
+                                    <Col xs={{span: 9}} xs={{span: 9}} md={{span: 9}} lg={{span: 9}}>
+                                        <img src={require("../image/ECO_LOGO.png")} width="300" height="300" className="image-effect" />
+                                    </Col>
+                                    </Row>
                                 </div>
                                 
                             </div>
