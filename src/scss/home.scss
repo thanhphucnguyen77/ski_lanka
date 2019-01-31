@@ -29,7 +29,9 @@ div.text-container {
 div.page-content-text {
 
   .image-effect {
-
+    // margin: 0 20px;
+    // width: 50px;
+    // height: 50px;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: appear;
@@ -88,7 +90,7 @@ div.page-content-text {
         margin: 0;
       }
         .line1 {
-            list-style: none;
+            // list-style: none;
             @for $i from 1 through 36{
                 span:nth-child(#{$i}){
                   animation: flyin#{$i} 4s 1 forwards; 
@@ -109,7 +111,7 @@ div.page-content-text {
         }
 
         .line2 {
-            list-style: none;
+            // list-style: none;
             @for $i from 1 through 70{
                 span:nth-child(#{$i}){
                   animation: flyin#{$i} 4s 1 forwards; 
@@ -130,7 +132,7 @@ div.page-content-text {
         }
 
         .line3 {
-            list-style: none;
+            // list-style: none;
             @for $i from 1 through 63{
                 span:nth-child(#{$i}){
                   animation: flyin#{$i} 4s 1 forwards; 
@@ -151,7 +153,7 @@ div.page-content-text {
         }
 
         .line4 {
-          list-style: none;
+          // list-style: none;
           @for $i from 1 through 62{
             span:nth-child(#{$i}){
               animation: flyin#{$i} 4s 1 forwards; 
@@ -172,7 +174,7 @@ div.page-content-text {
         }
 
       .line5 {
-        list-style: none;
+        // list-style: none;
         @for $i from 1 through 64{
           span:nth-child(#{$i}){
             animation: flyin#{$i} 4s 1 forwards; 
@@ -202,7 +204,7 @@ div.page-content-text {
 
 
   .ex-image-effect {
-
+    
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: appear;
@@ -262,7 +264,7 @@ div.page-content-text {
     margin: 0;
   }
   .ex-line1 {
-    list-style: none;
+    // list-style: none;
     @for $i from 1 through 35{
       span:nth-child(#{$i}){
       animation: flyin#{$i} 4s 1 forwards; 
@@ -283,7 +285,7 @@ div.page-content-text {
   }
 
   .ex-line2 {
-    list-style: none;
+    // list-style: none;
     @for $i from 1 through 72{
       span:nth-child(#{$i}){
       animation: flyin#{$i} 4s 1 forwards; 
@@ -304,7 +306,7 @@ div.page-content-text {
   }
 
   .ex-line3 {
-    list-style: none;
+    // list-style: none;
     @for $i from 1 through 45{
       span:nth-child(#{$i}){
       animation: flyin#{$i} 4s 1 forwards; 
@@ -325,7 +327,7 @@ div.page-content-text {
   }
   
   .ex-line4 {
-    list-style: none;
+    // list-style: none;
     @for $i from 1 through 43{
       span:nth-child(#{$i}){
       animation: flyin#{$i} 4s 1 forwards; 

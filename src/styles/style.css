@@ -26,7 +26,7 @@
     top: 50px;
     left: 0;
     right: 0;
-    padding: 4rem 0 0 7rem;
+    padding: 3rem 0 0 7rem;
     font-family: 'Prata', serif;
 }
 
@@ -233,7 +233,7 @@
 #output, #output2{
     /* The command I know best. */
     text-transform:uppercase;
-    color:#fdf6f0;
+    color: #fff;
     /* font-size:6em; */
     font-size: 45px;
     font-weight:bold;
@@ -242,6 +242,15 @@
     text-align: center;
     font-family: 'Prata', serif;
   }
+
+#output3 {
+  text-transform: uppercase;
+  color: #128732;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Prata', serif;
+}
 
 #disappearing1, #disappearing2 {
   color: #fff;
@@ -253,6 +262,18 @@
   animation-name: disappear;
   animation-duration: 4s;
 }
+
+#disappearing3 {
+  color: #128732;
+  font-family: 'Prata', serif;
+  font-size: 45px;
+  font-weight: bold;
+  -webkit-animation-name: disappear;
+  -webkit-animation-duration: 4s;
+  animation-name: disappear;
+  animation-duration: 4s;
+}
+
 
 @keyframes disappear {
   0% {
