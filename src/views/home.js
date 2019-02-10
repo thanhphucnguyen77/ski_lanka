@@ -452,6 +452,7 @@ class HomePage extends React.Component {
                                     <Col xs={{span: 10}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}}  >
                                         <div style={{position: "relative", height: "300px", width: "350px"}}>
                                             <img className="ex-image-effect" src={require("../image/exchange_4coin.png")} alt="exchange-icon" width="150" height="150" style={{position: "absolute", top: "0", left: "0"}} />
+                                            <img className="ex-image-effect" src={require("../image/add2.png")} alt="add icon" width="100" height="100" style={{position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }} />
                                             <img className="ex-image-effect" src={require("../image/mining_v2.png")} alt="mining-icon" width="150" height="150" style={{position: "absolute", bottom: "0", right: "0"}} />
                                         </div>
                                     </Col>

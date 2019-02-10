@@ -9,8 +9,10 @@
     top: -320px;
     -webkit-animation-name: slide-effect;
     -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: ease-in-out;
     animation-name: slide-effect;
     animation-duration: 4s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes slide-effect {
@@ -52,7 +54,7 @@
     top: 50px;
     left: 0;
     right: 0;
-    padding: 3rem 0 0 7rem;
+    padding: 2rem 0 0 0;
     font-family: 'Prata', serif;
 }
 
