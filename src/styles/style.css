@@ -7,12 +7,12 @@
     position: relative;
     z-index: 10;
     top: -320px;
-    -webkit-animation-name: slide-effect;
+    /* -webkit-animation-name: slide-effect;
     -webkit-animation-duration: 3s;
     -webkit-animation-timing-function: ease-in-out;
     animation-name: slide-effect;
     animation-duration: 4s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; */
 }
 
 @keyframes slide-effect {
@@ -248,7 +248,7 @@
     z-index: 1000;
     opacity: 1;
     position: absolute;
-    top: 50px;
+    /* top: 50px; */
     left: 0;
     right: 0;
     padding: 3rem 0;
@@ -369,6 +369,56 @@
     color: red;
 }
 
+.market-effect {
+  -webkit-animation-name: showup;
+  -webkit-animation-duration: 4s;
+  animation-name: showup;
+  animation-duration: 4s;
+  max-width: 1000px;
+  color: #fff;
+  min-height: 380px;
+  margin-top: -15px;
+  background-color: #2A3341;
+}
+
+@-webkit-keyframes showup {
+  0% {
+    opacity: 0;
+    width: 0;
+    color: #fff;
+    height: 0px;
+    margin-top: -15px;
+    
+  }
+
+  100% {
+    opacity: 1;
+    width: 1000px;
+    color: #fff;
+    min-height: 380px;
+    margin-top: -15px;
+    background-color: #2A3341;
+  }
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+    width: 0;
+    color: #fff;
+    height: 0;
+    margin-top: -15px;
+    background-color: #2A3341;
+  }
+  100% {
+    opacity: 1;
+    width: 1000px;
+    color: #fff;
+    min-height: 380px;
+    margin-top: -15px;
+    background-color: #2A3341;
+  }
+}
 /* footer */
 
 .footer-container {

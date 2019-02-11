@@ -9,6 +9,7 @@ import '../scss/home.scss';
 import '../App.css';
 import {Row, Col} from 'antd';
 import Footer from '../components/Footer.js';
+import '../styles/animate.css';
 
 const TabPane = Tabs.TabPane;
 
@@ -170,6 +171,8 @@ class HomePage extends React.Component {
             activeAbout: true,
             activeExchange: false,
             activeAf: false,
+            activeMarket: false,
+            activeContact: false,
             disappearTitle: false
 
         }
@@ -210,6 +213,30 @@ class HomePage extends React.Component {
         else {
             this.setState({
                 activeAf: false
+            })
+        }
+
+        if (key === '4') {
+            this.setState({
+                activeMarket: true
+            })
+        }
+
+        else {
+            this.setState({
+                activeMarket: false
+            })
+        }
+
+        if (key === '5') {
+            this.setState({
+                activeContact: true
+            })
+        }
+
+        else {
+            this.setState({
+                activeContact: false
             })
         }
     }
@@ -257,6 +284,7 @@ class HomePage extends React.Component {
             { this.state.isVisibleMenu ? 
         
             <div>
+            <div className="animated fadeInRight" >
             <div className="container-other-page">
                 <div style={{width: "100%", height: "35px", position: "absolute", top: "500px", boxSizing: "border-box"}}>
                 <Tabs defaultActiveKey="1" onChange={this.callback}>
@@ -320,12 +348,12 @@ class HomePage extends React.Component {
                                             <span>i</span><span>c</span><span>o</span><span>n</span><span>s</span><span>)</span>&nbsp;
                                         </li>
 
-                                        <li>
-                                            <img src={require("../image/bitcoin_m.png")} className="image-effect" style={{margin: "0 10px"}} />
-                                            <img src={require("../image/ethereum_m.png")} className="image-effect" style={{margin: "0 10px"}} />
-                                            <img src={require("../image/ripple_m.png")} className="image-effect" style={{margin: "0 10px"}} />
-                                            <img src={require("../image/litecoin_m2.png")} className="image-effect" style={{margin: "0 10px"}} />
-                                        </li>
+                                        <div>
+                                            <img src={require("../image/bitcoin_m.png")} width="40" height="40" className="image-effect" style={{margin: "0 10px"}} />
+                                            <img src={require("../image/ethereum_m.png")} width="40" height="40" className="image-effect" style={{margin: "0 10px"}} />
+                                            <img src={require("../image/ripple_m.png")} width="40" height="40" className="image-effect" style={{margin: "0 10px"}} />
+                                            <img src={require("../image/litecoin_m2.png")} width="40" height="40" className="image-effect" style={{margin: "0 10px"}} />
+                                        </div>
                                         
                                         {/* <li>Three-level system of wallets and multiple securities including 2FA.</li> */}
                                         <li className="line4">
@@ -452,7 +480,7 @@ class HomePage extends React.Component {
                                     <Col xs={{span: 10}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}}  >
                                         <div style={{position: "relative", height: "300px", width: "350px"}}>
                                             <img className="ex-image-effect" src={require("../image/exchange_4coin.png")} alt="exchange-icon" width="150" height="150" style={{position: "absolute", top: "0", left: "0"}} />
-                                            <img className="ex-image-effect" src={require("../image/add2.png")} alt="add icon" width="100" height="100" style={{position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }} />
+                                            <img className="ex-image-effect" src={require("../image/add2.png")} alt="add icon" width="70" height="70" style={{position: "absolute", top: "50%", left: "50%", transform: "translate(-30%, -40%)" }} />
                                             <img className="ex-image-effect" src={require("../image/mining_v2.png")} alt="mining-icon" width="150" height="150" style={{position: "absolute", bottom: "0", right: "0"}} />
                                         </div>
                                     </Col>
@@ -537,6 +565,7 @@ class HomePage extends React.Component {
                     
                     </TabPane>
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Market</span>} key="4">
+                    <div className={this.state.activeMarket ? "animated zoomIn" : "animated zoomOut"}>
                         <section className="page-content" style={{backgroundColor: "#2A3341"}} >
                     
                             <span className="bitcoin">BITCOIN MARKETS</span>
@@ -626,9 +655,10 @@ class HomePage extends React.Component {
                    
                         </section>
                     
-                    
+                    </div>
                     </TabPane>
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Contact us</span>} key="5">
+                    <div className={this.state.activeContact ? "animated zoomIn" : "animated zoomOut"}>
                         <section className="page-content" >
                             <div className="page-content-article-contact">
                                 <div className="contact-us-content">
@@ -641,9 +671,11 @@ class HomePage extends React.Component {
                                 </div>
                             </div>
                         </section>
+                    </div>
                     </TabPane>
                 </Tabs>
                 </div>
+             </div>
              </div>
              <Footer />
              </div>
