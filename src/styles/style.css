@@ -286,9 +286,9 @@
   font-size: 45px;
   font-weight: bold;
   -webkit-animation-name: disappear;
-  -webkit-animation-duration: 4s;
+  -webkit-animation-duration: 2s;
   animation-name: disappear;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 
 #disappearing3 {
@@ -297,9 +297,9 @@
   font-size: 45px;
   font-weight: bold;
   -webkit-animation-name: disappear;
-  -webkit-animation-duration: 4s;
+  -webkit-animation-duration: 2s;
   animation-name: disappear;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 
 
@@ -436,7 +436,7 @@
 }
 
 .footer-link {
-  width: 60%;
+  width: 48%;
   float: right;
   padding: 10px 0;
 }

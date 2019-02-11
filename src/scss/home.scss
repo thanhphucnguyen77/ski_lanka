@@ -1,4 +1,5 @@
 /* moving letter  */
+@import 'animate.css'; 
 
 div.text-container {
     span {
@@ -36,6 +37,7 @@ div.page-content-text {
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
     animation-name: appear;
     animation-duration: 10s;
+   
   }
 
   @keyframes appear {
@@ -459,7 +461,7 @@ div.page-content-text {
 
   .af-line3 {
     // list-style: none;
-    @for $i from 1 through 23{
+    @for $i from 1 through 25{
       span:nth-child(#{$i}){
       animation: flyin#{$i} 4s 1 forwards; 
       }

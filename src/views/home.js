@@ -239,6 +239,42 @@ class HomePage extends React.Component {
                 activeContact: false
             })
         }
+
+        // if (key === '1') {
+        //     this.setState({
+        //         activeAbout: true
+        //     })
+        // }
+        // else if (key === '2') {
+        //     this.setState({
+        //         activeExchange: true
+        //     })
+        // }
+        // else if (key === '3') {
+        //     this.setState({
+        //         activeAf: true
+        //     })
+        // }
+        // else if (key === '4') {
+        //     this.setState({
+        //         activeMarket: true
+        //     })
+        // }
+        // else if (key === '5') {
+        //     this.setState({
+        //         activeContact: true
+        //     })
+        // }
+
+        // else {
+        //     this.setState({
+        //         activeAbout: false,
+        //         activeExchange: false,
+        //         activeAf: false,
+        //         activeMarket: false,
+        //         activeContact: false
+        //     })
+        // }
     }
 
     displayMenu = () => {
@@ -247,7 +283,7 @@ class HomePage extends React.Component {
                 isVisibleTitle: false,
                 isVisibleMenu: true
             })
-        }, 10000)
+        }, 7000)
     }
 
     unDisplayTitle = () => {
@@ -255,12 +291,13 @@ class HomePage extends React.Component {
             this.setState({
                 disappearTitle: true
             })
-        }, 6000)
+        }, 5000)
     }
 
     componentDidMount() {
-        this.displayMenu();
         this.unDisplayTitle();
+        this.displayMenu();
+        
     }
 
     render() {
@@ -291,18 +328,18 @@ class HomePage extends React.Component {
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>About us</span>} key="1" >
                         <section className="page-content-about">
                             <div className="page-content-article">
-                                <div className={this.state.activeAbout ? "page-content-text" : ""}>
-                                   <Row>
-                                       <Col xs={{span: 15}} sm={{span: 15}} md={{span: 15}} lg={{span: 15}}>
-                                    <h1 className="about-us-title" style={{color: "#fff"}}>
+                                <Row>
+                                    <Col xs={{span: 15}} sm={{span: 15}} md={{span: 15}} lg={{span: 15}}>
+                                       <div className={this.state.activeAbout ? "page-content-text" : ""}>
+                                            <h1 className="about-us-title" style={{color: "#fff"}}>
                                        
-                                        <span>S</span><span>K</span><span>I</span>&nbsp;
-                                        <span>L</span><span>A</span><span>N</span><span>K</span><span>A</span><span>'S</span>&nbsp;
-                                        <span>F</span><span>I</span><span>R</span><span>S</span><span>T</span><br/>
-                                        <span>C</span><span>R</span><span>Y</span><span>P</span><span>T</span><span>O</span><span>C</span><span>U</span><span>R</span><span>R</span><span>E</span><span>N</span><span>C</span><span>Y</span>&nbsp;
-                                        <span>T</span><span>R</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>&nbsp;
-                                        <span>P</span><span>L</span><span>A</span><span>T</span><span>F</span><span>O</span><span>R</span><span>M</span>
-                                    </h1>
+                                                <span>S</span><span>K</span><span>I</span>&nbsp;
+                                                <span>L</span><span>A</span><span>N</span><span>K</span><span>A</span><span>'S</span>&nbsp;
+                                                <span>F</span><span>I</span><span>R</span><span>S</span><span>T</span><br/>
+                                                <span>C</span><span>R</span><span>Y</span><span>P</span><span>T</span><span>O</span><span>C</span><span>U</span><span>R</span><span>R</span><span>E</span><span>N</span><span>C</span><span>Y</span>&nbsp;
+                                                <span>T</span><span>R</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>&nbsp;
+                                                <span>P</span><span>L</span><span>A</span><span>T</span><span>F</span><span>O</span><span>R</span><span>M</span>
+                                            </h1>
                                     <div className="divider"></div>
                                     {console.log("active about ", this.state.activeAbout)}
                                     <ul className="about-content">
@@ -324,9 +361,9 @@ class HomePage extends React.Component {
                                             <span>a</span><span>r</span><span>e</span>&nbsp;
                                             <span>u</span><span>s</span><span>e</span><span>d</span>&nbsp;
                                             <span>t</span><span>o</span>&nbsp;
-                                            <span>t</span><span>h</span><span>e</span>&nbsp;
-                                            <span>e</span><span>n</span><span>v</span><span>i</span><span>r</span><span>o</span><span>n</span><span>m</span><span>e</span><span>n</span><span>t</span>&nbsp;
-                                            <span>o</span><span>f</span>&nbsp;
+                                            <span>p</span><span>l</span><span>a</span><span>n</span><span>t</span>&nbsp;
+                                            <span>S</span><span>a</span><span>l</span><span>a</span><span>c</span><span>i</span><span>a</span>&nbsp;
+                                            <span>i</span><span>n</span>&nbsp;
                                             <span>S</span><span>r</span><span>i</span>&nbsp;
                                             <span>L</span><span>a</span><span>n</span><span>k</span><span>a</span>&nbsp;
                                             <span>t</span><span>h</span><span>r</span><span>o</span><span>u</span><span>g</span><span>h</span>&nbsp;
@@ -344,15 +381,15 @@ class HomePage extends React.Component {
                                             <span>d</span><span>i</span><span>g</span><span>i</span><span>t</span><span>a</span><span>l</span>&nbsp;
                                             <span>a</span><span>s</span><span>s</span><span>e</span><span>t</span><span>s</span>&nbsp;
                                             <span>i</span><span>n</span><span>c</span><span>l</span><span>u</span><span>d</span><span>i</span><span>n</span><span>g</span>&nbsp;
-                                            <span>(</span><span>c</span><span>r</span><span>y</span><span>p</span><span>t</span><span>o</span>&nbsp;
-                                            <span>i</span><span>c</span><span>o</span><span>n</span><span>s</span><span>)</span>&nbsp;
+                                            {/* <span>(</span><span>c</span><span>r</span><span>y</span><span>p</span><span>t</span><span>o</span>&nbsp;
+                                            <span>i</span><span>c</span><span>o</span><span>n</span><span>s</span><span>)</span>&nbsp; */}
                                         </li>
 
                                         <div>
-                                            <img src={require("../image/bitcoin_m.png")} width="40" height="40" className="image-effect" style={{margin: "0 10px"}} />
-                                            <img src={require("../image/ethereum_m.png")} width="40" height="40" className="image-effect" style={{margin: "0 10px"}} />
-                                            <img src={require("../image/ripple_m.png")} width="40" height="40" className="image-effect" style={{margin: "0 10px"}} />
-                                            <img src={require("../image/litecoin_m2.png")} width="40" height="40" className="image-effect" style={{margin: "0 10px"}} />
+                                            <img src={require("../image/bitcoin_m.png")} width="40" height="40" className={this.state.activeAbout ? "animated slower zoomIn": ""} style={{margin: "0 10px"}} />
+                                            <img src={require("../image/ethereum_m.png")} width="40" height="40" className={this.state.activeAbout? "animated slower zoomIn" : ""} style={{margin: "0 10px"}} />
+                                            <img src={require("../image/ripple_m.png")} width="40" height="40" className={this.state.activeAbout ? "animated slower zoomIn" : ""} style={{margin: "0 10px"}} />
+                                            <img src={require("../image/litecoin_m2.png")} width="40" height="40" className={this.state.activeAbout ? "animated slower zoomIn" : ""} style={{margin: "0 10px"}} />
                                         </div>
                                         
                                         {/* <li>Three-level system of wallets and multiple securities including 2FA.</li> */}
@@ -382,13 +419,14 @@ class HomePage extends React.Component {
                                             <span>a</span><span>s</span><span>s</span><span>e</span><span>t</span><span>s</span>&nbsp;
                                         </li>
                                     </ul>
+                                    </div>
                                     </Col>
 
                                     <Col xs={{span: 9}} xs={{span: 9}} md={{span: 9}} lg={{span: 9}}>
-                                        <img src={require("../image/ECO_LOGO.png")} width="300" height="300" className="image-effect" />
+                                        <img src={require("../image/ECO_LOGO.png")} width="300" height="300" className={this.state.activeAbout ? "animated slower zoomIn" : ""} />
                                     </Col>
                                     </Row>
-                                </div>
+                                
                                 
                             </div>
                             
@@ -398,10 +436,10 @@ class HomePage extends React.Component {
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Exchange Token</span>} key="2">
                         <section className="page-content" >
                             <div className="page-content-article">
-                                <div className={this.state.activeExchange ? "exchange-container" : ""}>
+                               
                                 <Row gutter={32}>
-                                    <Col xs={{span: 14}} sm={{span: 14}} md={{span: 14}} lg={{span: 14}}>
-                                       
+                                    <Col xs={{span: 13}} sm={{span: 13}} md={{span: 13}} lg={{span: 13}}>
+                                        <div className={this.state.activeExchange ? "exchange-container" : ""}>
                                       
                                         
                                         <h1 style={{color: "#fff"}} className="exchange-title">
@@ -439,7 +477,7 @@ class HomePage extends React.Component {
                                                 <span>t</span><span>o</span><span>k</span><span>e</span><span>n</span>&nbsp;
                                                 <span>b</span><span>o</span><span>t</span><span>h</span>&nbsp;
                                                 <span>i</span><span>n</span><span>-</span><span>o</span><span>u</span><span>t</span><span>s</span><span>i</span><span>d</span><span>e</span>&nbsp;
-                                                <span>o</span><span>f</span>&nbsp;
+                                                <span>o</span><span>f</span>&nbsp;&nbsp;
                                                 <span>t</span><span>h</span><span>e</span>&nbsp;
                                                 {/* <span>e</span><span>x</span><span>c</span><span>h</span><span>a</span><span>n</span><span>g</span><span>e</span>&nbsp;  */}
                                                 <span>e</span><span>x</span><span>c</span><span>h</span><span>a</span><span>n</span><span>g</span><span>e</span>
@@ -474,18 +512,18 @@ class HomePage extends React.Component {
                                             </li>
 
                                         </ul>
-                                        
+                                        </div>
                                     </Col>
                                     
-                                    <Col xs={{span: 10}} sm={{span: 10}} md={{span: 10}} lg={{span: 10}}  >
-                                        <div style={{position: "relative", height: "300px", width: "350px"}}>
-                                            <img className="ex-image-effect" src={require("../image/exchange_4coin.png")} alt="exchange-icon" width="150" height="150" style={{position: "absolute", top: "0", left: "0"}} />
-                                            <img className="ex-image-effect" src={require("../image/add2.png")} alt="add icon" width="70" height="70" style={{position: "absolute", top: "50%", left: "50%", transform: "translate(-30%, -40%)" }} />
-                                            <img className="ex-image-effect" src={require("../image/mining_v2.png")} alt="mining-icon" width="150" height="150" style={{position: "absolute", bottom: "0", right: "0"}} />
+                                    <Col xs={{span: 11}} sm={{span: 11}} md={{span: 11}} lg={{span: 11}}  >
+                                        <div style={{position: "relative", height: "300px", width: "440px"}}>
+                                            <img className={this.state.activeExchange ? "animated slower zoomIn" : ""} src={require("../image/exchange_4coin.png")} alt="exchange-icon" width="150" height="150" style={{position: "absolute", top: "0", left: "0"}} />
+                                            <img className={this.state.activeExchange ? "animated slower zoomIn" : ""} src={require("../image/add2.png")} alt="add icon" width="70" height="70" style={{position: "absolute", top: "50%", left: "50%", transform: "translate(-30%, -40%)" }} />
+                                            <img className={this.state.activeExchange ? "animated slower zoomIn" : ""} src={require("../image/mining_v2.png")} alt="mining-icon" width="150" height="150" style={{position: "absolute", bottom: "0", right: "0"}} />
                                         </div>
                                     </Col>
                                 </Row>
-                                </div>
+                                
                             </div>
                         </section>
                     
@@ -494,11 +532,11 @@ class HomePage extends React.Component {
                     <section className="page-content">
                         {/* <section className="page-content-affiliate"></section> */}
                         <div className="page-content-article">
-                            <div className={this.state.activeAf ? "affiliate-container" : ""}>
+                            
                                 <Row>
                                     <Col xs={{span: 15}} sm={{span: 15}} md={{span: 15}} lg={{span: 15}}>
                                         
-                                        
+                                    <div className={this.state.activeAf ? "affiliate-container" : ""}>
                                         <h1 style={{color: "#fff"}} className="af-title">
                                                 <span>B</span><span>E</span><span>S</span><span>T</span>&nbsp;
                                                 <span>A</span><span>F</span><span>F</span><span>I</span><span>L</span><span>I</span><span>A</span><span>T</span><span>E</span>&nbsp;
@@ -545,19 +583,19 @@ class HomePage extends React.Component {
                                             {/* <li>Easily achieved missions.</li> */}
                                             <li className="af-line3">
                                                 {/* <img className="af-image-effect" src={require('../image/ripple.png')} style={{margin: "0 10px 0 0"}} /> */}
-                                                <span>E</span><span>a</span><span>s</span><span>i</span><span>l</span><span>y</span>&nbsp;
+                                                <span>E</span><span>a</span><span>s</span><span>i</span><span>l</span><span>l</span><span>y</span>&nbsp;
                                                 <span>a</span><span>c</span><span>h</span><span>i</span><span>e</span><span>v</span><span>e</span><span>d</span>&nbsp;
-                                                <span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span>&nbsp;
+                                                <span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span><span>s</span>&nbsp;
                                             
                                             </li>
                                         </ul>
-                                        
+                                        </div>
                                     </Col>
                                     <Col sx={{span: 9}} sm={{span: 9}} md={{span: 9}} lg={{span: 9}}>
-                                        <img className="af-image-effect" src={require("../image/user_coin4.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
+                                        <img className={this.state.activeAf ? "animated slower zoomIn" : ""} src={require("../image/user_coin4.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
                                     </Col>
                                 </Row>
-                            </div>
+                            
                            
                         </div>
                     </section>

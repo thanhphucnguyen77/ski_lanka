@@ -3609,8 +3609,8 @@
 }
 
 .animated.slower {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-duration: 4s;
+  animation-duration: s;
 }
 
 @media (print), (prefers-reduced-motion) {
