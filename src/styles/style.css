@@ -436,15 +436,25 @@
 }
 
 .footer-link {
-  width: 48%;
+  width: 43%;
   float: right;
   padding: 10px 0;
+}
+
+.footer-link ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-link li {
+  float: left;
 }
 
 .footer-link a {
   color: #fff;
   font-size: 10px;
-  text-align: center;
+  /* text-align: center; */
   font-weight: bold;
   padding: 2rem 10px;
   text-decoration: none;
