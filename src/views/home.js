@@ -433,6 +433,82 @@ class HomePage extends React.Component {
                         </section>
                     
                     </TabPane>
+
+                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Affiliate Program</span>} key="3">
+                    <section className="page-content">
+                        {/* <section className="page-content-affiliate"></section> */}
+                        <div className="page-content-article">
+                            
+                                <Row>
+                                    <Col xs={{span: 15}} sm={{span: 15}} md={{span: 15}} lg={{span: 15}}>
+                                        
+                                    <div className={this.state.activeAf ? "affiliate-container" : ""}>
+                                        <h1 style={{color: "#fff"}} className="af-title">
+                                                <span>B</span><span>E</span><span>S</span><span>T</span>&nbsp;
+                                                <span>A</span><span>F</span><span>F</span><span>I</span><span>L</span><span>I</span><span>A</span><span>T</span><span>E</span>&nbsp;
+                                                <span>S</span><span>Y</span><span>S</span><span>T</span><span>E</span><span>M</span>&nbsp;
+                                                <span>F</span><span>O</span><span>R</span>&nbsp;
+                                                <span>R</span><span>E</span><span>W</span><span>A</span><span>R</span><span>D</span>&nbsp;
+                                                <span>U</span><span>S</span><span>E</span><span>R</span><span>S</span>&nbsp;
+                                        
+                                        
+                                        </h1>
+                                        <div className="divider"></div>
+                                        <ul style={{color: "#fff"}} className="af-content" >
+                                            {/* <li>Receive up to 100% of transaction fees paid by linked users.  </li> */}
+                                            <li className="af-line1">
+                                                {/* <img className="af-image-effect" src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} /> */}
+                                                <span>R</span><span>e</span><span>c</span><span>e</span><span>i</span><span>v</span><span>e</span>&nbsp;
+                                                <span>u</span><span>p</span>&nbsp;
+                                                <span>t</span><span>o</span>&nbsp;
+                                                <span>1</span><span>0</span><span>0</span><span>%</span>&nbsp;
+                                                <span>o</span><span>f</span>&nbsp;
+                                                <span>t</span><span>r</span><span>a</span><span>n</span><span>s</span><span>a</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span>&nbsp;
+                                                <span>f</span><span>e</span><span>e</span><span>s</span>&nbsp;
+                                                <span>p</span><span>a</span><span>i</span><span>d</span>&nbsp;
+                                                <span>b</span><span>y</span>&nbsp;
+                                                <span>l</span><span>i</span><span>n</span><span>k</span><span>e</span><span>d</span>&nbsp;
+                                                <span>u</span><span>s</span><span>e</span><span>r</span><span>s</span>&nbsp;
+                                            </li>
+                                            {/* <li>Our model even rewards users who invite only one friend.</li> */}
+
+                                            <li className="af-line2">
+                                                 {/* <img className="af-image-effect" src={require('../image/ethereum.png')} style={{margin: "0 10px 0 0"}} /> */}
+                                                <span>O</span><span>u</span><span>r</span>&nbsp;
+                                                <span>m</span><span>o</span><span>d</span><span>e</span><span>l</span>&nbsp;
+                                                <span>e</span><span>v</span><span>e</span><span>n</span>&nbsp;
+                                                <span>r</span><span>e</span><span>w</span><span>a</span><span>r</span><span>d</span>&nbsp;
+                                                <span>u</span><span>s</span><span>e</span><span>r</span><span>s</span>&nbsp;
+                                                <span>w</span><span>h</span><span>o</span>&nbsp;
+                                                <span>i</span><span>n</span><span>v</span><span>i</span><span>t</span><span>e</span>&nbsp;
+                                                <span>o</span><span>n</span><span>l</span><span>y</span>&nbsp;
+                                                <span>o</span><span>n</span><span>e</span>&nbsp;
+                                                <span>f</span><span>r</span><span>i</span><span>e</span><span>n</span><span>d.</span>&nbsp;
+
+                                            </li>
+                                            {/* <li>Easily achieved missions.</li> */}
+                                            <li className="af-line3">
+                                                {/* <img className="af-image-effect" src={require('../image/ripple.png')} style={{margin: "0 10px 0 0"}} /> */}
+                                                <span>E</span><span>a</span><span>s</span><span>i</span><span>l</span><span>l</span><span>y</span>&nbsp;
+                                                <span>a</span><span>c</span><span>h</span><span>i</span><span>e</span><span>v</span><span>e</span><span>d</span>&nbsp;
+                                                <span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span><span>s</span>&nbsp;
+                                            
+                                            </li>
+                                        </ul>
+                                        </div>
+                                    </Col>
+                                    <Col sx={{span: 9}} sm={{span: 9}} md={{span: 9}} lg={{span: 9}}>
+                                        <img className={this.state.activeAf ? "animated slower zoomIn" : ""} src={require("../image/user_coin4.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
+                                    </Col>
+                                </Row>
+                            
+                           
+                        </div>
+                    </section>
+                
+                    
+                    </TabPane>
+
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Exchange Token</span>} key="2">
                         <section className="page-content" >
                             <div className="page-content-article">
@@ -528,80 +604,7 @@ class HomePage extends React.Component {
                         </section>
                     
                     </TabPane>
-                    <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Affiliate</span>} key="3">
-                    <section className="page-content">
-                        {/* <section className="page-content-affiliate"></section> */}
-                        <div className="page-content-article">
-                            
-                                <Row>
-                                    <Col xs={{span: 15}} sm={{span: 15}} md={{span: 15}} lg={{span: 15}}>
-                                        
-                                    <div className={this.state.activeAf ? "affiliate-container" : ""}>
-                                        <h1 style={{color: "#fff"}} className="af-title">
-                                                <span>B</span><span>E</span><span>S</span><span>T</span>&nbsp;
-                                                <span>A</span><span>F</span><span>F</span><span>I</span><span>L</span><span>I</span><span>A</span><span>T</span><span>E</span>&nbsp;
-                                                <span>S</span><span>Y</span><span>S</span><span>T</span><span>E</span><span>M</span>&nbsp;
-                                                <span>F</span><span>O</span><span>R</span>&nbsp;
-                                                <span>R</span><span>E</span><span>W</span><span>A</span><span>R</span><span>D</span>&nbsp;
-                                                <span>U</span><span>S</span><span>E</span><span>R</span><span>S</span>&nbsp;
-                                        
-                                        
-                                        </h1>
-                                        <div className="divider"></div>
-                                        <ul style={{color: "#fff"}} className="af-content" >
-                                            {/* <li>Receive up to 100% of transaction fees paid by linked users.  </li> */}
-                                            <li className="af-line1">
-                                                {/* <img className="af-image-effect" src={require('../image/bitcoins.png')} style={{margin: "0 10px 0 0"}} /> */}
-                                                <span>R</span><span>e</span><span>c</span><span>e</span><span>i</span><span>v</span><span>e</span>&nbsp;
-                                                <span>u</span><span>p</span>&nbsp;
-                                                <span>t</span><span>o</span>&nbsp;
-                                                <span>1</span><span>0</span><span>0</span><span>%</span>&nbsp;
-                                                <span>o</span><span>f</span>&nbsp;
-                                                <span>t</span><span>r</span><span>a</span><span>n</span><span>s</span><span>a</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span>&nbsp;
-                                                <span>f</span><span>e</span><span>e</span><span>s</span>&nbsp;
-                                                <span>p</span><span>a</span><span>i</span><span>d</span>&nbsp;
-                                                <span>b</span><span>y</span>&nbsp;
-                                                <span>l</span><span>i</span><span>n</span><span>k</span><span>e</span><span>d</span>&nbsp;
-                                                <span>u</span><span>s</span><span>e</span><span>r</span><span>s</span>&nbsp;
-                                            </li>
-                                            {/* <li>Our model even rewards users who invite only one friend.</li> */}
-
-                                            <li className="af-line2">
-                                                 {/* <img className="af-image-effect" src={require('../image/ethereum.png')} style={{margin: "0 10px 0 0"}} /> */}
-                                                <span>O</span><span>u</span><span>r</span>&nbsp;
-                                                <span>m</span><span>o</span><span>d</span><span>e</span><span>l</span>&nbsp;
-                                                <span>e</span><span>v</span><span>e</span><span>n</span>&nbsp;
-                                                <span>r</span><span>e</span><span>w</span><span>a</span><span>r</span><span>d</span>&nbsp;
-                                                <span>u</span><span>s</span><span>e</span><span>r</span><span>s</span>&nbsp;
-                                                <span>w</span><span>h</span><span>o</span>&nbsp;
-                                                <span>i</span><span>n</span><span>v</span><span>i</span><span>t</span><span>e</span>&nbsp;
-                                                <span>o</span><span>n</span><span>l</span><span>y</span>&nbsp;
-                                                <span>o</span><span>n</span><span>e</span>&nbsp;
-                                                <span>f</span><span>r</span><span>i</span><span>e</span><span>n</span><span>d.</span>&nbsp;
-
-                                            </li>
-                                            {/* <li>Easily achieved missions.</li> */}
-                                            <li className="af-line3">
-                                                {/* <img className="af-image-effect" src={require('../image/ripple.png')} style={{margin: "0 10px 0 0"}} /> */}
-                                                <span>E</span><span>a</span><span>s</span><span>i</span><span>l</span><span>l</span><span>y</span>&nbsp;
-                                                <span>a</span><span>c</span><span>h</span><span>i</span><span>e</span><span>v</span><span>e</span><span>d</span>&nbsp;
-                                                <span>m</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span><span>s</span>&nbsp;
-                                            
-                                            </li>
-                                        </ul>
-                                        </div>
-                                    </Col>
-                                    <Col sx={{span: 9}} sm={{span: 9}} md={{span: 9}} lg={{span: 9}}>
-                                        <img className={this.state.activeAf ? "animated slower zoomIn" : ""} src={require("../image/user_coin4.png")} width="400" height="300" style={{marginLeft: "5rem 20px"}}  />
-                                    </Col>
-                                </Row>
-                            
-                           
-                        </div>
-                    </section>
-                
                     
-                    </TabPane>
                     <TabPane tab={<span style={{color: "#fff", fontWeight: "bold"}}>Market</span>} key="4">
                     <div className={this.state.activeMarket ? "animated zoomIn" : "animated zoomOut"}>
                         <section className="page-content" style={{backgroundColor: "#2A3341"}} >
